@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Константин Лесняк](https://up.htmlacademy.ru/adaptive/21/user/885303).
-* Наставник: `Неизвестно`.
+* Наставник: Сергей Попенко (https://htmlacademy.ru/profile/id66243).
 
 ---
 
