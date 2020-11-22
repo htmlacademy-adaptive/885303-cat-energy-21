@@ -1,8 +1,9 @@
 // Global
 
 @import "fonts.scss";
-@import "mixins.scss";
-@import "visually-hidden.scss";
+@import "global.scss";
+
+// Overall
 
 @import "header.scss";
 @import "footer.scss";
@@ -19,5 +20,3 @@
 // form.html
 
 @import "form.scss";
-
-
