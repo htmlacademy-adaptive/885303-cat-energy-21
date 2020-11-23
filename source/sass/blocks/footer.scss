@@ -1,0 +1,13 @@
+.footer__slogan {
+  @include font ($font-size: 16px, $line-height: 18px, $text-transform: uppercase);
+  color: var(--special-black);
+}
+
+.footer__adress {
+  line-height: 20px;
+}
+
+.footer__copyright-text {
+  font-size: 16px;
+  line-height: 18px;
+}

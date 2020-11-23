@@ -2,21 +2,22 @@
 
 @import "fonts.scss";
 @import "global.scss";
+@import "blocks/page-body.scss";
 
 // Overall
 
-@import "header.scss";
-@import "footer.scss";
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
 
 // index.html
 
-@import "page.scss";
-@import "billboard.scss";
-@import "program.scss";
-@import "features.scss";
-@import "example.scss";
-@import "slider.scss";
+@import "blocks/page.scss";
+@import "blocks/billboard.scss";
+@import "blocks/program.scss";
+@import "blocks/features.scss";
+@import "blocks/example.scss";
+@import "blocks/slider.scss";
 
 // form.html
 
-@import "form.scss";
+@import "blocks/form.scss";

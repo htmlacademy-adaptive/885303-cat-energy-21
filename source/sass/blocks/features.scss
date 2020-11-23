@@ -1,0 +1,12 @@
+.features {
+  background-color: var(-basic-white);
+}
+
+.features__title {
+  @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
+  color: var(--basic-black);
+}
+
+.features__list {
+  list-style: none;
+}

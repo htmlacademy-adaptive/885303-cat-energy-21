@@ -1,9 +1,13 @@
+.header {
+  background-color: var(--basic-white);
+}
+
 .header__nav-list {
-  font: ('Oswald', normal, 500, 20px, 20px, uppercase);
+  @include font ($font-weight: 500);
   list-style: none;
 }
 
 .header__nav-link {
-  font: ('Oswald', normal, 500, 20px, 20px, uppercase);
+  color: var(--basic-black);
   text-decoration: none;
 }
