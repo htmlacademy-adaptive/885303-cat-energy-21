@@ -1,0 +1,22 @@
+.billboard {
+  background-color: var(--basic-green);
+}
+
+.billboard__title {
+  @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
+  color: var(--basic-white);
+  text-align: center;
+}
+
+.billboard__subtitle {
+  @include font ($font-size: 14px, $line-height: 14px);
+  color: var(--basic-white);
+  text-align: center;
+}
+
+.billboard__more {
+  @include font ($font-size: 14px, $line-height: 18px);
+  background-color: var(--basic-green);
+  color: var(--basic-white);
+  text-decoration: none;
+}

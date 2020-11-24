@@ -1,1 +1,23 @@
-// Начните писать стили здесь
+// Global
+
+@import "fonts.scss";
+@import "global.scss";
+@import "blocks/page-body.scss";
+
+// Overall
+
+@import "blocks/header.scss";
+@import "blocks/footer.scss";
+
+// index.html
+
+@import "blocks/page.scss";
+@import "blocks/billboard.scss";
+@import "blocks/program.scss";
+@import "blocks/features.scss";
+@import "blocks/example.scss";
+@import "blocks/slider.scss";
+
+// form.html
+
+@import "blocks/form.scss";

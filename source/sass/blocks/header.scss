@@ -1,0 +1,13 @@
+.header {
+  background-color: var(--basic-white);
+}
+
+.header__nav-list {
+  @include font ($font-weight: 500);
+  list-style: none;
+}
+
+.header__nav-link {
+  color: var(--basic-black);
+  text-decoration: none;
+}
