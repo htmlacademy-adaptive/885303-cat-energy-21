@@ -1,0 +1,7 @@
+@mixin font ($font-family: 'Oswald', $font-weight: 400, $font-size: 20px, $line-height: 20px, $text-transform: uppercase){
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  text-transform: $text-transform;
+}

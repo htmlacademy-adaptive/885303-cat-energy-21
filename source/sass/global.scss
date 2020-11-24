@@ -3,6 +3,7 @@
   --special-black: #111111;
   --basic-white: #FFFFFF;
   --basic-green: #68B738;
+  --special-dark-grey: #222222;
   --basic-dark-grey: #444444;
   --basic-grey: #F2F2F2;
   --basic-light-grey: #EAEAEA;
@@ -19,14 +20,6 @@
   clip: rect(0 0 0 0)
 }
 
-@mixin font ($font-family: 'Oswald', $font-weight: 400, $font-size: 20px, $line-height: 20px, $text-transform: uppercase){
-  font-family: $font-family;
-  font-weight: $font-weight;
-  font-size: $font-size;
-  line-height: $line-height;
-  text-transform: $text-transform;
-}
-
 * {
   &::after,
   &::before {
@@ -36,7 +29,7 @@
 
 .page-body {
   width: 320px;
-  margin: 0 auto;  
+  margin: 0 auto;
 }
 
 .wrap {
