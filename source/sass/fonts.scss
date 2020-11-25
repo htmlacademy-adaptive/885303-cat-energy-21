@@ -12,7 +12,8 @@
   font-family: "Oswald";
   font-style: medium;
   font-weight: 500;
-  src: local("Oswald"), local("Oswald-Medium"),
+  src: local("Oswald"),
+    local("Oswald-Medium"),
     url("../fonts/oswaldmedium.woff2") format("woff2"),
     url("../fonts/oswaldmedium.woff") format("woff");
 }
@@ -21,8 +22,8 @@
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
-
-  src: local("Arial"), local("Arial-Regular"),
+  src: local("Arial"),
+    local("Arial-Regular"),
     url("../fonts/Arial.woff2") format("woff2"),
     url("../fonts/Arial.woff") format("woff");
 }
