@@ -1,13 +1,13 @@
 :root {
   --basic-black: #000000;
   --special-black: #111111;
-  --basic-white: #FFFFFF;
-  --basic-green: #68B738;
+  --basic-white: #ffffff;
+  --basic-green: #68b738;
   --special-dark-grey: #222222;
   --basic-dark-grey: #444444;
-  --basic-grey: #F2F2F2;
-  --basic-light-grey: #EAEAEA;
-  --basic-green: #68B738;
+  --basic-grey: #f2f2f2;
+  --basic-light-grey: #eaeaea;
+  --basic-green: #68b738;
 }
 
 .visually-hidden {
@@ -18,7 +18,7 @@
   padding: 0;
   overflow: hidden;
   border: 0;
-  clip: rect(0 0 0 0)
+  clip: rect(0 0 0 0);
 }
 
 * {
