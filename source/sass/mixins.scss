@@ -5,3 +5,8 @@
   line-height: $line-height;
   text-transform: $text-transform;
 }
+
+@mixin button ($background-color: var(--basic-green), $color: var(--basic-white)){
+  background-color: $background-color;
+  color: $color;
+}
