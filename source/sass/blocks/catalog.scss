@@ -1,0 +1,58 @@
+.catalog {
+  background-color: var(--basic-white);
+}
+
+.caption {
+  @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
+  color: var(--basic-black);
+}
+
+.product__name {
+  @include font ($font-size: 16px, $line-height: 20px);
+  color: var(--special-dark-grey);
+}
+
+.product__options {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--basic-dark-grey);
+}
+
+.product__button {
+  @include button ();
+}
+
+.more__title {
+  @include font ($font-size: 16px, $line-height: 20px);
+  color: var(--special-black);
+}
+
+.more__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--basic-dark-grey);
+}
+
+.more__button {
+  @include font ($font-size: 16px, $line-height: 0);
+  @include button ($background-color: var(--basic-grey), $color: var(--basic-dark-grey));
+}
+
+.additionally__caption {
+  @include font ($font-size: 24px, $line-height: 24px);
+  color: var(--basic-black);
+}
+
+.additionally__title {
+  @include font ($font-size: 16px, $line-height: 16px);
+  color: var(--special-dark-grey);
+}
+
+.additionally__text {
+  line-height: 14px;
+  color: var(--basic-dark-grey);
+}
+
+.additionally__button {
+  @include button();
+}

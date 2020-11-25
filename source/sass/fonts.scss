@@ -2,25 +2,28 @@
   font-family: "Oswald";
   font-style: normal;
   font-weight: 400;
-  src: local('Oswald'), local('Oswald-Regular'),
-  url('../fonts/oswaldregular.woff2') format('woff2'),
-  url('../fonts/oswaldregular.woff') format('woff');
+  src: local("Oswald"),
+    local("Oswald-Regular"),
+    url("../fonts/oswaldregular.woff2") format("woff2"),
+    url("../fonts/oswaldregular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-style: medium;
   font-weight: 500;
-  src: local('Oswald'), local('Oswald-Medium'),
-  url('../fonts/oswaldmedium.woff2') format('woff2'),
-  url('../fonts/oswaldmedium.woff') format('woff');
+  src: local("Oswald"),
+    local("Oswald-Medium"),
+    url("../fonts/oswaldmedium.woff2") format("woff2"),
+    url("../fonts/oswaldmedium.woff") format("woff");
 }
 
 @font-face {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
-  src: local('Arial'), local('Arial-Regular'),
-  url('../fonts/Arial.woff2') format('woff2'),
-  url('../fonts/Arial.woff') format('woff');
+  src: local("Arial"),
+    local("Arial-Regular"),
+    url("../fonts/Arial.woff2") format("woff2"),
+    url("../fonts/Arial.woff") format("woff");
 }
