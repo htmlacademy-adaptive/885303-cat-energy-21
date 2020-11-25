@@ -6,7 +6,8 @@
   text-transform: $text-transform;
 }
 
-@mixin button ($background-color: var(--basic-green), $color: var(--basic-white)){
+@mixin button ($background-color: var(--basic-green), $color: var(--basic-white), $border: none){
   background-color: $background-color;
   color: $color;
+  border: $border;
 }
