@@ -25,6 +25,7 @@ $desktop-width: 1200px;
 }
 
 * {
+  &,
   &::after,
   &::before {
     box-sizing: border-box;
@@ -38,4 +39,14 @@ $desktop-width: 1200px;
 
 .wrap {
   padding: 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 30px 0;
+  }
+
+}
+
+.clear {
+  margin: 0;
+  padding: 0;
 }

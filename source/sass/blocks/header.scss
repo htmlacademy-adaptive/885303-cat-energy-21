@@ -1,6 +1,13 @@
 .header {
   background-color: var(--basic-white);
-  display: flex;
+  width: 320px;
+
+  border: 1px solid black;
+
+  @media (min-width: $tablet-width) {
+    width: $tablet-width;
+    min-height: 76px;
+  }
 }
 
 .header__nav-list {
@@ -8,7 +15,23 @@
   list-style: none;
 }
 
+.header__nav-item {
+  min-height: 66px;
+  text-align: center;
+  vertical-align: middle;
+}
+
 .header__nav-link {
   color: var(--basic-black);
   text-decoration: none;
+}
+
+.header__nav-button {
+  width: 18px;
+  height: 18px;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
 }
