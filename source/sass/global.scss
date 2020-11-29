@@ -35,6 +35,11 @@ $desktop-width: 1200px;
 .page-body {
   width: 320px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
 }
 
 .wrap {
