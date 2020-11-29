@@ -1,5 +1,13 @@
 .program {
+  min-width: 266px;
   background-color: var(--basic-grey);
+}
+
+.program__wrap {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end; 
+  align-items: center;
 }
 
 .program__title {
@@ -10,4 +18,5 @@
 .program__catalog {
   @include font ($font-size: 16px, $line-height: 16px);
   text-decoration: none;
+  color: var(--basic-black);
 }
