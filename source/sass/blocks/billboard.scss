@@ -1,12 +1,13 @@
 .billboard {
   min-height: 500px;
+  background: url('../img/cat-billboard.png') no-repeat;
 }
 
 .billboard__title {
   @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
   color: var(--basic-white);
   text-align: center;
-  padding-top: 20px;  
+  padding-top: 20px;
 }
 
 .billboard__subtitle {
@@ -20,15 +21,8 @@
   background-color: var(--basic-green);
   color: var(--basic-white);
   text-decoration: none;
-}
-
-
-.billboard__image {
-  display: block;
-}
-
-.billboard__picture {  
-  background-color: transparentize(#68b738, 0.15);
+  width: 280px;
+  height: 40px;
 }
 
 @media (min-width: $tablet-width) {
