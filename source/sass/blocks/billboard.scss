@@ -1,28 +1,12 @@
 .billboard {
   min-height: 500px;
-  background-color: var(--basic-green);
-  
-  @media (min-width: $tablet-width) {
-    width: 768px;
-    background-color: var(--basic-white);
-  }
-}
-
-.billboard__wrap {
-  @media (min-width: $tablet-width) {
-  padding: 0 60px 0;
-  }
 }
 
 .billboard__title {
   @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
   color: var(--basic-white);
   text-align: center;
-
-  @media (min-width: $tablet-width) {
-    color: var(--basic-black);
-    text-align: left;
-  }
+  padding-top: 20px;  
 }
 
 .billboard__subtitle {
@@ -36,4 +20,29 @@
   background-color: var(--basic-green);
   color: var(--basic-white);
   text-decoration: none;
+}
+
+
+.billboard__image {
+  display: block;
+}
+
+.billboard__picture {  
+  background-color: transparentize(#68b738, 0.15);
+}
+
+@media (min-width: $tablet-width) {
+  .billboard {
+    width: 768px;
+    background-color: var(--basic-white);
+  }
+
+  .billboard__wrap {
+    padding: 0 60px 0;
+  }
+
+  .billboard__title {
+    color: var(--basic-black);
+    text-align: left;
+  }
 }
