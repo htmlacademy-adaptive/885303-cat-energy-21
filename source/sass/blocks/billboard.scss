@@ -1,5 +1,6 @@
 .billboard {
-  min-height: 500px;
+  display: flex;
+  min-height: 480px;
   background: url('../img/cat-billboard.png') no-repeat;
 }
 
@@ -18,15 +19,15 @@
 
 .billboard__more {
   display: flex;
-  @include font ($font-size: 14px, $line-height: 18px);
+  @include font ($font-size: 14px, $line-height: 18px);  
   background-color: var(--basic-green);
   color: var(--basic-white);
   text-decoration: none;
   width: 280px;
   height: 40px;
   align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+  justify-content: center;  
+  margin: 0 auto;    
 }
 
 @media (min-width: $tablet-width) {

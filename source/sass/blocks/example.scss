@@ -1,21 +1,36 @@
 .example {
   background-color: var(--basic-light-grey);
+  padding-top: 27px;
+  padding-bottom: 40px;  
 }
 
 .example__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
   color: var(--basic-black);
+  margin-bottom: 33px;  
+}
+
+.example__text {
+  margin-bottom: 25px;
 }
 
 .example__progress tr:first-child {
   @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
+  text-align: center;  
 }
 
 .example__progress tr:nth-child(2n) {
   font-size: 12px;
   line-height: 12px;
+  text-align: center; 
+}
+
+.example__progress {    
+  margin: 0 auto;
+  margin-bottom: 25px;
 }
 
 .example__total {
   @include font ($font-size: 14px);
+  text-align: center;
 }

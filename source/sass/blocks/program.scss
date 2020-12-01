@@ -1,6 +1,5 @@
 .program {
-  min-width: 266px;
-  background-color: var(--basic-grey);
+  @include container ($margin-top: 20px);  
 }
 
 .program__wrap {
@@ -8,15 +7,21 @@
   flex-direction: row-reverse;
   justify-content: flex-end;
   align-items: center;
+  
 }
 
 .program__title {
   @include font ($font-size: 24px, $line-height: 37px);
-  color: var(--basic-black);
+  color: var(--basic-black);  
 }
 
 .program__catalog {
   @include font ($font-size: 16px, $line-height: 16px);
   text-decoration: none;
-  color: var(--basic-black);
+  color: var(--basic-black);  
+}
+
+.program__container {
+  min-height: 266px;
+  background-color: var(--basic-grey);
 }
