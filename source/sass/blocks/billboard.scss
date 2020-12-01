@@ -1,7 +1,7 @@
 .billboard {
   display: flex;
   min-height: 480px;
-  background: url('../img/cat-billboard.png') no-repeat;
+  background: url("../img/cat-billboard.png") no-repeat;
 }
 
 .billboard__title {
@@ -19,29 +19,46 @@
 
 .billboard__more {
   display: flex;
-  @include font ($font-size: 14px, $line-height: 18px);  
+  @include font ($font-size: 14px, $line-height: 18px);
   background-color: var(--basic-green);
   color: var(--basic-white);
   text-decoration: none;
   width: 280px;
   height: 40px;
   align-items: center;
-  justify-content: center;  
-  margin: 0 auto;    
+  justify-content: center;
+  margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) {
   .billboard {
     width: 768px;
-    background-color: var(--basic-white);
-  }
-
-  .billboard__wrap {
-    padding: 0 60px 0;
+    background-image: none;
   }
 
   .billboard__title {
+    @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
     color: var(--basic-black);
     text-align: left;
+    margin-bottom: 41px;
+  }
+
+  .billboard__subtitle {
+    position: relative;
+    @include font ($font-size: 20px, $line-height: 20px);
+    color: var(--basic-black);
+    text-align: left;
+  }
+
+  .billboard__image {
+    width: 709px;
+    height: 609px;
+  }
+
+  .billboard__more {
+    position: absolute;
+    width: 244px;
+    height: 54px;
+    top: 320px;
   }
 }

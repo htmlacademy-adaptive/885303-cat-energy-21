@@ -16,11 +16,11 @@
 
 .slider__wrap {
   display: flex;
-  justify-content: space-around;  
+  justify-content: space-around;
 }
 
 .slider__scale {
-  display: flex;  
+  display: flex;
   border: 1px solid var(--special-grey);
   border-radius: 15px;
   width: 84px;
@@ -35,5 +35,5 @@
   background-color: var(--basic-green);
   width: 35px;
   height: 6px;
-  border-radius: 15px
+  border-radius: 15px;
 }
