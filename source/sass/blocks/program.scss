@@ -24,3 +24,9 @@
   min-height: 266px;
   background-color: var(--basic-grey);
 }
+
+@media (min-width: $tablet-width) {
+  .program__container {
+    display: grid;     
+  }
+}

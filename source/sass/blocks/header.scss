@@ -40,6 +40,10 @@
     justify-content: space-between;
   }
 
+  .header__wrap {
+    margin-right: auto;
+  }
+
   .header__nav-list {
     @include font ($font-size: 18px, $line-height: 24px);
     display: flex;
