@@ -15,9 +15,9 @@
 
 .features__step {
   position: relative;
-  margin-left: 35px;
   min-height: 60px;
   margin-top: 20px;
+  padding-left: 75px;
 }
 
 .features__step::before {
@@ -26,10 +26,83 @@
   width: 60px;
   height: 60px;
   background-color: var(--basic-green);
-  left: -75px;
+  left: 0;
   top: 0;
 }
 
 @media (min-width: $tablet-width) {
+  .features {
+    border-bottom: 1px solid var(--tablet-border);
+  }
 
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .features__step {
+    display: flex;
+    width: 247px;
+    height: 280px;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .features__step::before {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: 0;
+    top: 0;
+  }
+
+  .features__step:first-child::after {
+    content: "1";
+    position: absolute;
+    @include font ($font-size: 280px, $line-height: 280px);
+    color: var(--basic-grey);
+    top: -40px;
+    right: 0;
+    z-index: -1;
+  }
+
+  .features__step:nth-child(2n)::after {
+    content: "2";
+    position: absolute;
+    @include font ($font-size: 280px, $line-height: 280px);
+    color: var(--basic-grey);
+    top: -40px;
+    right: 0;
+    z-index: -1;
+  }
+
+  .features__step:nth-child(3n)::after {
+    content: "3";
+    position: absolute;
+    @include font ($font-size: 280px, $line-height: 280px);
+    color: var(--basic-grey);
+    top: -40px;
+    right: 0;
+    z-index: -1;
+  }
+
+  .features__step:last-child::after {
+    content: "4";
+    position: absolute;
+    @include font ($font-size: 280px, $line-height: 280px);
+    color: var(--basic-grey);
+    top: -40px;
+    right: 0;
+    z-index: -1;
+  }
+
+  .features__step {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .features__title {
+    @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
+  }
 }
