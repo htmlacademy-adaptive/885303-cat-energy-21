@@ -37,3 +37,28 @@
   height: 6px;
   border-radius: 15px;
 }
+
+@media (min-width: $tablet-width) {
+  .slider__button {
+    @include font ($font-size: 20px, $line-height: 30px);
+  }
+
+  .slider__scale {
+    width: 428px;
+    height: 6px;
+    background-color: var(--scale-bg-grey);
+    margin: 0 13px 0;
+  }
+
+  .slider__wrap {
+    justify-content: center;    
+  }
+
+  .slider__bar {
+    background-color: var(--basic-green);
+    width: 34px;
+    height: 34px;
+    border: 13px solid var(--basic-white);
+    border-radius: 50px;    
+  }
+}
