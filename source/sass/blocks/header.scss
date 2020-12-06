@@ -15,11 +15,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-bottom: 1px solid var(--tablet-border);
 }
 
 .header__nav-link {
   color: var(--basic-black);
   text-decoration: none;
+  margin-bottom: 23px;
 }
 
 .header__nav-button {
@@ -28,8 +30,13 @@
 }
 
 .header__wrap {
+  min-height: 66px;
   display: flex;
   justify-content: space-between;
+  border-bottom: 1px solid var(--tablet-border);
+}
+
+.header__logo-text--img {
   align-items: center;
 }
 

@@ -18,8 +18,8 @@
 }
 
 .billboard__more {
-  display: flex;
   @include font ($font-size: 14px, $line-height: 18px);
+  display: flex;
   background-color: var(--basic-green);
   color: var(--basic-white);
   text-decoration: none;
@@ -44,16 +44,16 @@
   }
 
   .billboard__subtitle {
-    position: relative;
     @include font ($font-size: 20px, $line-height: 20px);
+    position: relative;
     color: var(--basic-black);
     text-align: left;
   }
 
-  // .billboard__image {
-  //   width: 709px;
-  //   height: 609px;
-  // }
+  .billboard__image {
+    width: 709px;
+    height: 609px;
+  }
 
   .billboard__more {
     position: absolute;

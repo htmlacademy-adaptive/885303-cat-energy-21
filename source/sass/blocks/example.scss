@@ -14,20 +14,20 @@
   margin-bottom: 25px;
 }
 
-.example__progress tr:first-child {
-  @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
-  text-align: center;
-}
-
-.example__progress tr:nth-child(2n) {
-  font-size: 12px;
-  line-height: 12px;
-  text-align: center;
-}
-
 .example__progress {
   margin: 0 auto;
   margin-bottom: 25px;
+
+  tr:first-child {
+    @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
+    text-align: center;
+  }
+
+  tr:nth-child(2n) {
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+  }
 }
 
 .example__total {
@@ -47,10 +47,6 @@
     justify-content: space-between;
   }
 
-  .example__progress {
-    margin: 0;
-  }
-
   .example__text {
     font-size: 16px;
     line-height: 24px;
@@ -63,13 +59,17 @@
     text-align: right;
   }
 
-  .example__progress tr:first-child {
-    @include font ($font-size: 30px, $line-height: 37px, $text-transform: inherit);
-  }
+  .example__progress {
+    margin: 0;
 
-  .example__progress tr:nth-child(2n) {
-    font-size: 14px;
-    line-height: 14px;
+    tr:first-child {
+      @include font ($font-size: 30px, $line-height: 37px, $text-transform: inherit);
+    }
+
+    tr:nth-child(2n) {
+      font-size: 14px;
+      line-height: 14px;
+    }
   }
 
   .example__title {
