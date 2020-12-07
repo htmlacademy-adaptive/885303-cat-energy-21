@@ -66,12 +66,26 @@
 @media (min-width: $desktop-width) {
   .billboard {
     width: 1200px;
+    min-height: 696px;
     background: url("../img/cat-billboard-desktop.png") no-repeat;
-    background-position: right -66px; 
+    background-position: right;
+    background-size: 51%;
+  }
+
+  .billboard__wrap {
+    position: relative;
+    padding-top: 220px;
   }
 
   .billboard__image {
+    position: absolute;
     width: 552px;
     height: 449px;
+    right: -454px;
+    top: 173px;
+  }
+
+  .billboard__more {
+    top: 494px;
   }
 }
