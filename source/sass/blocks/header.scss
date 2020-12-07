@@ -49,16 +49,18 @@
 
   .header__wrap {
     margin-right: auto;
+    border: none;
   }
 
   .header__nav-list {
     @include font ($font-size: 18px, $line-height: 24px);
-    display: flex;
+    display: flex;    
   }
 
   .header__nav-item {
     display: flex;
     align-items: center;
+    border: none;
   }
 
   .header__nav-button {
@@ -70,7 +72,7 @@
   .header {
     width: 1200px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between;    
   }
 
   .header__nav-list {
