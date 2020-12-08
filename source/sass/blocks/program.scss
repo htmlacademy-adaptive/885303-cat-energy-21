@@ -72,5 +72,45 @@
 }
 
 @media (min-width: $desktop-width) {
-  
+  .program__container {
+    grid-template-rows: 120px 120px 54px;
+    grid-template-columns: 140px 150px 110px;
+    width: 460px;
+    padding: 42px;
+  }
+
+  .program__image {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    width: 100px;
+    height: 106px;
+  }
+
+  .program__text {
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+  }
+
+  .program__title {
+    grid-row: 1 / 2;
+    grid-column: 2 / 4;
+    vertical-align: middle;
+  }
+
+  .program__wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    .program:first-child {
+      width: 460px;
+      padding: 0;
+      margin-right: auto;
+    }
+
+    .program:last-child {
+      width: 460px;
+      padding: 0;
+    }
+  }
+
 }
