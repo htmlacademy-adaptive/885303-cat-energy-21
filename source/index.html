@@ -53,7 +53,7 @@
     </section>
 
     <div class="program__wrapper wrap">
-    <section class="program wrap">
+    <section class="program">
       <div class="program__container">
           <h2 class="clear program__title">Похудение</h2>
           <img class="program__image" src="img/cat_back.svg" alt="Изображение худого кота" width="50" height="53">
@@ -67,7 +67,7 @@
       </div>
     </section>
 
-    <section class="program wrap">
+    <section class="program">
       <div class="program__container">
           <h2 class="clear program__title">Набор массы</h2>
           <img class="program__image" src="img/cat_back2.svg" alt="Изображение мускулистого кота" width="67" height="50">
@@ -127,8 +127,12 @@
 
     <section class="clear slider wrap">
       <p class="clear slider__picture">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/cat-fat.png">
+          <source media="(min-width: 768px)" srcset="img/cat-fat.png">
         <img class="clear slider__image" src="img/before-mobile 1.png"
           alt="Изображение толстого кота до программы похудения" width="311" height="232">
+        </picture>
       </p>
       <p class="clear slider__picture visually-hidden">
         <img class="slider__image" src="#" alt="Изображение худого кота после программы похудения" width="311"
@@ -162,7 +166,7 @@
       </div>
     </section>
 
-    <div class="footer__container">
+    <div class="footer__container wrap">
     <section class="footer__logo wrap">
       <a class="footer__logo-link" href="#">
         <img class="footer__logo-image" src="img/footer-logo.svg" alt="Логотип интернет-магазина Cat Energy" width="128"

@@ -77,7 +77,6 @@
   .footer__container {
     display: flex;
     justify-content: space-between;
-    padding: 55px 30px 61px;
   }
 
   .footer__social {
@@ -121,4 +120,19 @@
     height: 33px;
     border: none;
   }
+}
+
+@media (min-width: $desktop-width) {
+  .footer__map {
+    position: relative;
+  }
+
+  .footer__wrap {
+    position: absolute;
+    width: 570px;
+    height: 201px;
+    top: 50px;
+    left: 50px;    
+  }
+
 }
