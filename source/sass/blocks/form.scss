@@ -11,6 +11,28 @@
   .form__pet-options {
     @include font ($font-size: 16px, $line-height: 18px);
     color: var(--basic-dark-grey);
+    border: none;
+    padding: 30px 0 20px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(----basic-border);
+  }
+
+  .form__wrap-options {
+    display: flex;
+    margin-bottom: 13px;
+
+    label {
+      margin-right: 15px;
+      align-self: center;
+    }
+
+    input {
+      width: 100%;
+      height: 45px;
+      padding: 14px;
+      border: 1px solid var(--special-form-border);
+    }
   }
 
   .form__selection {

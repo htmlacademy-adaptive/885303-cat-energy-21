@@ -11,16 +11,24 @@
 <body class="page-body">
 
   <header class="header wrap">
-    <a class="header__logo" href="#">
-      <img class="header__logo-img" src="#" alt="Логотип интернет-магазина Cat Energy" width="138" height="70">
-    </a>
-    <ul class="header__nav-list">
-      <li class="header__nav-item"><a class="header__nav-link" href="index.html">Главная</a></li>
+    <div class="header__wrap">
+      <a class="header__logo" href="#">
+        <img class="header__logo-img" src="img\logo-mobile.svg" alt="Логотип интернет-магазина Cat Energy" width="34"
+          height="38">
+      </a>
+      <a class="header__logo-text" href="#">
+        <img class="header__logo-text--img" src="img/logo-text.svg" alt="Название интернет-магазина Cat Energy" width="101"
+          height="18">
+      </a>
+      <button class="header__nav-button"><span class="visually-hidden">Кнопка отображения навигации
+          сайта</span></button>
+    </div>
+    <ul class="clear header__nav-list">
+      <li class="header__nav-item"><a class="header__nav-link" href="#">Главная</a></li>
       <li class="header__nav-item"><a class="header__nav-link" href="catalog.html">Каталог продукции</a></li>
-      <li class="header__nav-item"><a class="header__nav-link" href="#">Подбор программы</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="form.html">Подбор программы</a></li>
     </ul>
     </nav>
-    <button class="header__nav-button"><span>Кнопка отображения навигации сайта</span></button>
   </header>
 
   <main>
@@ -35,14 +43,20 @@
       <form action="https://echo.htmlacademy.ru" method="GET">
 
         <fieldset class="form__pet-options">
-          <label for="pet-name">ИМЯ:*</label>
-          <input class="form__pet-name" type="text" id="pet-name">
+          <div class="form__wrap-options">
+            <label for="pet-name">ИМЯ:*</label>
+            <input class="form__pet-name" type="text" id="pet-name" placeholder="Барсик">
+          </div>
 
+          <div class="form__wrap-options">
           <label for="pet-weight">Вес (кг):*</label>
-          <input class="form__pet-pet-weight" type="text" id="pet-weight">
+          <input class="form__pet-pet-weight" type="text" id="pet-weight" placeholder="7" >
+        </div>
 
-          <label for="pet-age">ИМЯ:*</label>
-          <input class="form__pet-age" type="text" id="pet-age">
+        <div class="form__wrap-options">
+          <label for="pet-age">Возраст (лет):</label>
+          <input class="form__pet-age" type="text" id="pet-age" placeholder="7">
+        </div>
         </fieldset>
 
         <fieldset class="form__selection">
