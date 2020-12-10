@@ -60,24 +60,33 @@
         </fieldset>
 
         <fieldset class="form__selection">
-          <label for="slimming">Похудение</label>
-          <input class="form__selection-item" type="radio" id="slimming" name="program">
-
-          <label for="gain">Набор массы</label>
-          <input class="form__selection-item" type="radio" id="gain" name="program">
-
-          <label for="unknown">Не знаю (Нужен ваш совет)</label>
-          <input class="form__selection-item" type="radio" id="unknown" name="program">
+          <div class="form__wrap-selection">
+            <input class="form__selection-item" type="radio" id="slimming" name="program">
+            <label for="slimming">Похудение</label>
+          </div>
+          <div class="form__wrap-selection">
+            <input class="form__selection-item" type="radio" id="gain" name="program">
+            <label for="gain">Набор массы</label>
+          </div>
+        
+          <div class="form__wrap-selection">
+            <input class="form__selection-item" type="radio" id="unknown" name="program">
+            <label for="unknown">Не знаю (Нужен ваш совет)</label>
+          </div>
         </fieldset>
 
         <fieldset class="form__contacts">
           <legend class="form__contacts-title">Контактные данные (владельца кота)</legend>
-
-          <label for="email">E-mail:*</label>
-          <input class="form__email" type="email" id="email">
-
-          <label for="tel">Телефон:*</label>
-          <input class="form__tel" type="tel" id="tel">
+        
+          <div class="form__wrap-contacts">
+            <label for="email">E-mail:*</label>
+            <input class="form__email" type="email" id="email" placeholder="kuklachev@gmail.com">
+          </div>
+        
+          <div class="form__wrap-contacts">
+            <label for="tel">Телефон:*</label>
+            <input class="form__tel" type="tel" id="tel" placeholder="8 (960) 900-60-90">
+          </div>
         </fieldset>
 
         <fieldset class="form__comment">
