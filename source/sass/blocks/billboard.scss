@@ -1,11 +1,14 @@
 .billboard {
-  background-color: var(--basic-green);
+  display: flex;
+  min-height: 480px;
+  background: url("../img/cat-billboard.png") no-repeat;
 }
 
 .billboard__title {
   @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
   color: var(--basic-white);
   text-align: center;
+  padding-top: 20px;
 }
 
 .billboard__subtitle {
@@ -16,7 +19,73 @@
 
 .billboard__more {
   @include font ($font-size: 14px, $line-height: 18px);
+  display: flex;
   background-color: var(--basic-green);
   color: var(--basic-white);
   text-decoration: none;
+  width: 280px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .billboard {
+    width: 768px;
+    background-image: none;
+  }
+
+  .billboard__title {
+    @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
+    color: var(--basic-black);
+    text-align: left;
+    margin-bottom: 41px;
+  }
+
+  .billboard__subtitle {
+    @include font ($font-size: 20px, $line-height: 20px);
+    position: relative;
+    color: var(--basic-black);
+    text-align: left;
+  }
+
+  .billboard__image {
+    width: 709px;
+    height: 609px;
+  }
+
+  .billboard__more {
+    position: absolute;
+    width: 244px;
+    height: 54px;
+    top: 320px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .billboard {
+    width: 1200px;
+    min-height: 696px;
+    background: url("../img/cat-billboard-desktop.png") no-repeat;
+    background-position: right;
+    background-size: 51%;
+  }
+
+  .billboard__wrap {
+    position: relative;
+    padding-top: 220px;
+  }
+
+  .billboard__image {
+    position: absolute;
+    width: 552px;
+    height: 449px;
+    right: -454px;
+    top: 173px;
+  }
+
+  .billboard__more {
+    top: 494px;
+  }
 }

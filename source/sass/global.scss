@@ -6,9 +6,16 @@
   --special-dark-grey: #222222;
   --basic-dark-grey: #444444;
   --basic-grey: #f2f2f2;
+  --special-grey: #cdcdcd;
+  --scale-bg-grey: #dcdcdc;
   --basic-light-grey: #eaeaea;
   --basic-green: #68b738;
+  --basic-border: #d9d9d9;
+  --tablet-border: #e6e6e6;
 }
+
+$tablet-width: 768px;
+$desktop-width: 1440px;
 
 .visually-hidden {
   position: absolute;
@@ -22,6 +29,7 @@
 }
 
 * {
+  &,
   &::after,
   &::before {
     box-sizing: border-box;
@@ -35,4 +43,31 @@
 
 .wrap {
   padding: 0 20px 0;
+}
+
+.clear {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .page-body {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .wrap {
+    padding: 0 30px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-body {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .wrap {
+    padding: 0 110px 0;
+  }
 }
