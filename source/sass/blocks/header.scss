@@ -26,6 +26,7 @@
 .header__nav-button {
   width: 18px;
   height: 18px;
+  align-self: center;
 }
 
 .header__wrap {
@@ -35,8 +36,16 @@
   border-bottom: 1px solid var(--tablet-border);
 }
 
+.header__logo {
+  align-self: center;
+}
+
 .header__logo-text--img {
   align-items: center;
+}
+
+.header__logo-text {
+  align-self: center;
 }
 
 @media (min-width: $tablet-width) {
@@ -62,9 +71,23 @@
     border: none;
   }
 
+  .header__nav-link {    
+    margin-left: 35px;    
+  }
+
   .header__nav-button {
     display: none;
   }
+
+  .header__logo-img {
+    display: none;
+  }
+
+  .header__logo-text--img {
+    width: 174px;
+    height: 52px;
+  } 
+
 }
 
 @media (min-width: $desktop-width) {

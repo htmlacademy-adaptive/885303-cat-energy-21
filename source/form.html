@@ -17,14 +17,18 @@
           height="38">
       </a>
       <a class="header__logo-text" href="#">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
         <img class="header__logo-text--img" src="img/logo-text.svg" alt="Название интернет-магазина Cat Energy"
           width="101" height="18">
+        </picture>
       </a>
       <button class="header__nav-button"><span class="visually-hidden">Кнопка отображения навигации
           сайта</span></button>
     </div>
     <ul class="clear header__nav-list">
-      <li class="header__nav-item"><a class="header__nav-link" href="#">Главная</a></li>
+      <li class="header__nav-item"><a class="header__nav-link" href="index.html">Главная</a></li>
       <li class="header__nav-item"><a class="header__nav-link" href="catalog.html">Каталог продукции</a></li>
       <li class="header__nav-item"><a class="header__nav-link" href="form.html">Подбор программы</a></li>
     </ul>
@@ -33,9 +37,10 @@
 
   <main>
 
-    <h1 class="visually-hidden">Подбор системы питания для вашего кота Cat Energy</h1>
+    <h1 class="visually-hidden">Подбор системы питания для вашего кота Cat Energy</h1>    
 
     <section class="form wrap">
+      <div class="form_container">
       <h2 class="form__caption">Подбор программы</h2>
 
       <p class="form__title">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
@@ -96,8 +101,10 @@
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="form__additionally">
+        <fieldset class="clear form__additionally">
           <legend class="form__additionally-title">Дополнительно</legend>
+
+          <div class="form__container-additionally">
 
           <div class="form__wrap-additionally">
             <input class="form__checkbox" type="checkbox" id="sugar">
@@ -118,12 +125,18 @@
             <input class="form__checkbox" type="checkbox" id="vitamins">
             <label for="vitamins">Витамины</label>
           </div>
+        </div>
         </fieldset>
 
+        <div class="form__wrapper-additionally">
         <button class="form__button" type="submit">Отправить заявку</button>
-
-        <p class="form__text">* — Обязательные поля</p>
+        
+        <p class="clear form__text">* — Обязательные поля</p>
+      </div>
+      
+      </div>
       </form>
+    
     </section>
 
   </main>
