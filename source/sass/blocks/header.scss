@@ -71,8 +71,8 @@
     border: none;
   }
 
-  .header__nav-link {    
-    margin-left: 35px;    
+  .header__nav-link {
+    margin-left: 35px;
   }
 
   .header__nav-button {
@@ -86,7 +86,7 @@
   .header__logo-text--img {
     width: 174px;
     height: 52px;
-  } 
+  }
 
 }
 
@@ -98,14 +98,21 @@
     margin-bottom: -10%;
   }
 
+  .header--desktop {
+    margin-bottom: 0;
+  }
+
   .header__nav-list {
     @include font ($line-height: 30px);
   }
 
   .header__nav-link {
-    color: var(--basic-white);
     margin-left: 35px;
     margin-bottom: 0;
+  }
+
+  .header__nav-link--white {
+    color: var(--basic-white);
   }
 
   .header__nav-button {
