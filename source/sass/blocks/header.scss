@@ -84,15 +84,14 @@
   }
 
   .header__logo-text--img {
-    width: 174px;
-    height: 52px;
+    width: 197px;
+    height: 70px;
   }
-
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    width: 1200px;
+    width: 1220px;
     display: flex;
     justify-content: space-between;
     margin-bottom: -10%;
