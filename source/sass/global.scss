@@ -4,6 +4,7 @@
   --basic-white: #ffffff;
   --basic-green: #68b738;
   --special-dark-grey: #222222;
+  --special-form-border: #e7e7e7;
   --basic-dark-grey: #444444;
   --basic-grey: #f2f2f2;
   --special-grey: #cdcdcd;
@@ -63,11 +64,11 @@ $desktop-width: 1440px;
 
 @media (min-width: $desktop-width) {
   .page-body {
-    width: 1200px;
-    margin: 0 auto;
+    width: 1420px;
+    margin: 0 auto;    
   }
 
   .wrap {
-    padding: 0 110px 0;
+    padding: 0 100px 0;
   }
 }
