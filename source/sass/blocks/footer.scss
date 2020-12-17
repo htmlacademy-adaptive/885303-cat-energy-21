@@ -146,5 +146,18 @@
 
   .footer__wrap--form {
     background-color: var(--basic-white);
+    top: 101px;
+    left: 106px;
+  }
+
+  .footer__iframe {
+    iframe {
+      width: 100%;
+      height: 426px;
+    }
+  }
+
+  .footer__container {
+    min-height: 110px;
   }
 }
