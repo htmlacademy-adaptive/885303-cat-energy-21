@@ -2,9 +2,15 @@
   background-color: var(--basic-white);
 }
 
-.caption {
+.catalog__list {
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__caption {
   @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
   color: var(--basic-black);
+  margin-top: 27px;
 }
 
 .product__name {
@@ -20,6 +26,9 @@
 
 .product__button {
   @include button ();
+  @include font ($font-size: 16px, $line-height: 20px);
+  width: 280px;
+  height: 40px;
 }
 
 .more__title {
