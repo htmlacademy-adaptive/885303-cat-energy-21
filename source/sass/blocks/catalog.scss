@@ -11,11 +11,11 @@
   @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
   color: var(--basic-black);
   margin-top: 26px;
-  margin-bottom: 41px;
-  
+  margin-bottom: 42px;
+  padding: 0 20px 0;
 }
 
-.catalog__wrap {
-  border-bottom: 1px solid var(--tablet-border);
-}
+// .catalog__wrap {
+//   border-bottom: 1px solid var(--tablet-border);
+// }
 
