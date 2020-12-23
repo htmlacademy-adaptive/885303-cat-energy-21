@@ -1,16 +1,56 @@
+.more__wrap {
+  min-height: 210px;
+  padding: 25px 20px 25px;
+}
+
 .more__title {
     @include font ($font-size: 16px, $line-height: 20px);
     color: var(--special-black);
+    text-align: center;
   }
   
   .more__text {
     font-size: 12px;
     line-height: 16px;
     color: var(--basic-dark-grey);
+    text-align: center;
   }
   
   .more__button {
     @include font ($font-size: 16px, $line-height: 0);
     @include button ($background-color: var(--basic-grey), $color: var(--basic-dark-grey));
+    width: 280px;
+    height: 40px;  
+  }
+
+  .more__button-plus {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+        
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      top: 15px;
+      left: 0;
+      background-color: var(--catalog-button);
+      transform: rotate(90deg);
+    } 
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 30px;
+      top: 0;
+      left: 14px;
+      background-color: var(--catalog-button);
+      transform: rotate(-90deg);
+    }
   }
   
