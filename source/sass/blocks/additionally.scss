@@ -2,6 +2,17 @@
     @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
     color: var(--basic-black);
     margin: 24px 0 36px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 53px;
+      height: 2px;
+      top: 14px;
+      right: -20px;
+      background-color: var(--basic-green);
+    }
   }
 
   .additionally__title {
