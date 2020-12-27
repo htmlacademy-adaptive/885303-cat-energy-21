@@ -14,3 +14,35 @@
   margin-bottom: 42px;
   padding: 0 20px 0;
 }
+
+@media (min-width: $tablet-width) {
+  .catalog__caption {
+    @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
+    margin-top: 51px;
+    padding: 0;
+    margin-bottom: 163px;
+  }
+
+  .catalog {
+    padding: 0 30px 0;
+    border: 0;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    min-height: 429px;
+    background-color: var(--special-grey);
+
+    &:nth-child(odd) {
+      margin: 0 58px 141px 0;
+    }
+
+    &:nth-child(even) {
+      margin: 0 0 141px 0;
+    }
+  }
+}
