@@ -59,4 +59,14 @@
     }
   }
 
+  @media (min-width: $tablet-width) {
+    .additionally__caption {
+      @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
+
+      &::after {
+        width: 328px;
+      }
+    }
+  }
+
 

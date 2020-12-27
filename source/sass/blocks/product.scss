@@ -58,16 +58,23 @@
     .product__button {
       width: 248px;
       height: 39px;
+      margin: 0 auto;
+    }
+
+    .product__wrap {
+      padding: 0 0 0 6px;
     }
 
     .product {
       grid-template-columns: 265px;
-      grid-template-rows: 143px 180px 40px;
+      grid-template-rows: 143px 207px 40px;
     }
 
     .product__name {
       @include font ($line-height: 24px);
+      width: 261px;
       text-align: center;
+      margin: 18px 0 10px 0;
     }
 
     .product__options {
