@@ -7,43 +7,99 @@
 }
 
 .more__title {
-    @include font ($font-size: 16px, $line-height: 20px);
-    color: var(--special-black);
+  @include font ($font-size: 16px, $line-height: 20px);
+  color: var(--special-black);
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.more__text {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--basic-dark-grey);
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.more__button {
+  @include font ($font-size: 16px, $line-height: 0);
+  @include button ($background-color: var(--basic-grey), $color: var(--basic-dark-grey));
+  width: 280px;
+  height: 40px;
+}
+
+.more__button-plus {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  margin-bottom: 23px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 31px;
+    height: 2px;
+    top: 13px;
+    left: 0;
+    background-color: var(--catalog-button);
+    transform: rotate(90deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 31px;
+    top: -1px;
+    left: 14px;
+    background-color: var(--catalog-button);
+    transform: rotate(-90deg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .more__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 429px;
     text-align: center;
-    margin-bottom: 7px;
+    border: 2px solid var(--basic-grey);
+    padding: 51px 20px 25px;
+  }
+
+  .more__title {
+    @include font ($line-height: 22px);
+    width: 150px;
+    margin-bottom: 23px;
   }
 
   .more__text {
-    font-size: 12px;
-    line-height: 16px;
-    color: var(--basic-dark-grey);
-    text-align: center;
-    margin-bottom: 21px;
-  }
-
-  .more__button {
-    @include font ($font-size: 16px, $line-height: 0);
-    @include button ($background-color: var(--basic-grey), $color: var(--basic-dark-grey));
-    width: 280px;
-    height: 40px;
+    font-size: 16px;
+    line-height: 18px;
+    width: 167px;
+    margin-bottom: 87px;
   }
 
   .more__button-plus {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 60px;
+    height: 60px;
     border: none;
     cursor: pointer;
     background-color: transparent;
-    margin-bottom: 23px;
+    margin-bottom: 50px;
 
     &::before {
       content: "";
       position: absolute;
-      width: 31px;
+      width: 61px;
       height: 2px;
-      top: 13px;
-      left: 0;
+      top: 30px;
+      left: 2px;
       background-color: var(--catalog-button);
       transform: rotate(90deg);
     }
@@ -52,10 +108,11 @@
       content: "";
       position: absolute;
       width: 2px;
-      height: 31px;
-      top: -1px;
-      left: 14px;
+      height: 61px;
+      top: 1px;
+      left: 30px;
       background-color: var(--catalog-button);
       transform: rotate(-90deg);
     }
   }
+}

@@ -1,72 +1,122 @@
 .additionally__caption {
-    @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
-    color: var(--basic-black);
-    margin: 24px 0 34px 0;
-    position: relative;
+  @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
+  color: var(--basic-black);
+  margin: 24px 0 34px 0;
+  position: relative;
 
-    &::after {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 53px;
+    height: 2px;
+    top: 14px;
+    right: -20px;
+    background-color: var(--basic-green);
+  }
+}
+
+.additionally__title {
+  @include font ($font-size: 16px, $line-height: 16px);
+  color: var(--special-dark-grey);
+  width: 280px;
+  margin-bottom: 13px;
+}
+
+.additionally__text {
+  line-height: 14px;
+  color: var(--basic-dark-grey);
+  width: 172px;
+  margin-bottom: 15px;
+}
+
+.additionally__price {
+  line-height: 14px;
+  color: var(--basic-dark-grey);
+  width: 108px;
+  text-align: end;
+}
+
+.additionally__button {
+  @include font ($font-size: 16px, $line-height: 20px);
+  @include button();
+  width: 280px;
+  height: 40px;
+}
+
+.additionally__list {
+  list-style: none;
+}
+
+.additionally__item {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 130px;
+  border-top: 1px solid var(--catalog-border);
+  padding: 11px 0 20px 0;
+
+  &:last-child {
+    border-bottom: 1px solid var(--catalog-border);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .additionally__caption {
+    @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
+    margin: 0 0 55px 0;
+    padding: 69px 0 25px 37px;
+
+    &::before {
       content: "";
-      position: absolute;
-      width: 53px;
-      height: 2px;
-      top: 14px;
-      right: -20px;
-      background-color: var(--basic-green);
-    }
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    top: 90px;
+    left: -30px;
+    background-color: var(--basic-green);
   }
 
-  .additionally__title {
-    @include font ($font-size: 16px, $line-height: 16px);
-    color: var(--special-dark-grey);
-    width: 280px;
-    margin-bottom: 13px;
+  &::after {
+    width: 328px;
+    top: 90px;
+    right: -30px;
   }
+}
 
   .additionally__text {
-    line-height: 14px;
-    color: var(--basic-dark-grey);
-    width: 172px;
-    margin-bottom: 15px;
-  }
-
-  .additionally__price {
-    line-height: 14px;
-    color: var(--basic-dark-grey);
-    width: 108px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 258px;
     text-align: end;
   }
 
-  .additionally__button {
-    @include font ($font-size: 16px, $line-height: 20px);
-    @include button();
-    width: 280px;
-    height: 40px;
+  .additionally__price {
+    font-size: 16px;
+    line-height: 20px;
+    width: 92px;
+    text-align: end;
   }
 
-  .additionally__list {
-    list-style: none;
+  .additionally__title {
+    @include font ();
+    width: 280px;
+    margin-bottom: 26px;
   }
 
   .additionally__item {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: 130px;
-    border-top: 1px solid var(--catalog-border);
-    padding: 11px 0 20px 0;
+    padding: 26px 37px 28px;
+    border-top: 1px solid var(--special-grey);
 
-    &:last-child {
-      border-bottom: 1px solid var(--catalog-border);
+    &:first-child {
+      border-top: none;
     }
   }
 
-  @media (min-width: $tablet-width) {
-    .additionally__caption {
-      @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
-
-      &::after {
-        width: 328px;
-      }
-    }
+  .additionally__button {
+    width: 632px;
+    height: 38px;
   }
 
-
+  .additionally__list {
+    border: 1px solid var(--special-grey);
+  }
+}

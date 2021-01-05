@@ -35,14 +35,18 @@
 
   .catalog__item {
     min-height: 429px;
-    background-color: var(--special-grey);
+    background-color: var(--basic-grey);
 
     &:nth-child(odd) {
-      margin: 0 58px 141px 0;
+      margin: 0 58px 142px 0;
     }
 
     &:nth-child(even) {
-      margin: 0 0 141px 0;
+      margin: 0 0 142px 0;
+    }
+
+    &:nth-child(7n) {
+      margin-bottom: 0;
     }
   }
 }
