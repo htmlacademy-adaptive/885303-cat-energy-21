@@ -217,7 +217,7 @@
     color: var(--basic-black);
     text-align: center;
     margin-bottom: 30px;
-  }  
+  }
 
   @media (min-width: $tablet-width) {
     .form_container {
@@ -239,9 +239,9 @@
       margin-bottom: 35px;
     }
 
-    .form__wrap-options {      
+    .form__wrap-options {
       margin-bottom: 25px;
-    
+
       label {
         margin-right: 18px;
         align-self: center;
@@ -259,18 +259,18 @@
       margin-bottom: 76px;
     }
 
-    .form__wrap-selection {      
+    .form__wrap-selection {
       margin-bottom: 12px;
-      
+
       label {
         @include font ($line-height: 30px);
       }
-  
+
       input {
         margin-right: 18px;
         width: 40px;
         height: 40px;
-      }      
+      }
     }
 
     .form__contacts-title {
@@ -322,11 +322,11 @@
     }
 
     .form__additionally {
-      @include font ($font-size: 20px, $line-height: 30px);      
+      @include font ($font-size: 20px, $line-height: 30px);
 
       .form__additionally-title {
         @include font ($font-size: 36px, $line-height: 36px, $text-transform: none);
-        margin-bottom: 57px;        
+        margin-bottom: 57px;
       }
 
 
@@ -470,7 +470,7 @@
 
     .form__wrapper-additionally {
       margin-bottom: 61px;
-    }    
+    }
 
     .form__additionally {
       .form__container-additionally {

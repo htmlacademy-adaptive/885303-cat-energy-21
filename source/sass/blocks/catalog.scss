@@ -2,57 +2,82 @@
   background-color: var(--basic-white);
 }
 
-.caption {
+.catalog__list {
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__caption {
   @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
   color: var(--basic-black);
+  margin-top: 26px;
+  margin-bottom: 42px;
+  padding: 0 20px 0;
 }
 
-.product__name {
-  @include font ($font-size: 16px, $line-height: 20px);
-  color: var(--special-dark-grey);
+@media (min-width: $tablet-width) {
+  .catalog__caption {
+    @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
+    margin-top: 51px;
+    padding: 0;
+    margin-bottom: 163px;
+  }
+
+  .catalog {
+    padding: 0 30px 0;
+    border: 0;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .catalog__item {
+    width: 324px;
+    min-height: 429px;
+    background-color: var(--basic-grey);
+
+    &:nth-child(odd) {
+      margin: 0 58px 142px 0;
+    }
+
+    &:nth-child(even) {
+      margin: 0 0 142px 0;
+    }
+
+    &:nth-child(7n) {
+      margin-bottom: 0;
+    }
+  }
 }
 
-.product__options {
-  font-size: 12px;
-  line-height: 16px;
-  color: var(--basic-dark-grey);
-}
+@media (min-width: $desktop-width) {
+  .catalog {
+    width: 1440px;
+    padding: 0 110px 0;
+  }
 
-.product__button {
-  @include button ();
-}
+  .catalog__caption {
+    margin-top: 65px;
+    margin-bottom: 165px;
+  }
 
-.more__title {
-  @include font ($font-size: 16px, $line-height: 20px);
-  color: var(--special-black);
-}
+  .catalog__item {
+    width: 245px;
 
-.more__text {
-  font-size: 12px;
-  line-height: 16px;
-  color: var(--basic-dark-grey);
-}
+    &:not(:nth-child(4n)) {
+      margin: 0 80px 145px 0;
+    }
 
-.more__button {
-  @include font ($font-size: 16px, $line-height: 0);
-  @include button ($background-color: var(--basic-grey), $color: var(--basic-dark-grey));
-}
+    &:nth-child(4n) {
+      margin-bottom: 145px;
+    }
 
-.additionally__caption {
-  @include font ($font-size: 24px, $line-height: 24px);
-  color: var(--basic-black);
-}
-
-.additionally__title {
-  @include font ($font-size: 16px, $line-height: 16px);
-  color: var(--special-dark-grey);
-}
-
-.additionally__text {
-  line-height: 14px;
-  color: var(--basic-dark-grey);
-}
-
-.additionally__button {
-  @include button();
+    &:nth-child(5n),
+    &:nth-child(6n),
+    &:nth-child(7n) {
+      margin-bottom: 0;
+    }
+  }
 }
