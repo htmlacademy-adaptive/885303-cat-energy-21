@@ -66,20 +66,20 @@
 
     &::before {
       content: "";
-    position: absolute;
-    width: 30px;
-    height: 2px;
-    top: 90px;
-    left: -30px;
-    background-color: var(--basic-green);
-  }
+      position: absolute;
+      width: 30px;
+      height: 2px;
+      top: 90px;
+      left: -30px;
+      background-color: var(--basic-green);
+    }
 
-  &::after {
-    width: 328px;
-    top: 90px;
-    right: -30px;
+    &::after {
+      width: 328px;
+      top: 90px;
+      right: -30px;
+    }
   }
-}
 
   .additionally__text {
     font-size: 16px;
