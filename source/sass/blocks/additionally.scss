@@ -40,7 +40,7 @@
   @include font ($font-size: 16px, $line-height: 20px);
   @include button();
   width: 280px;
-  height: 40px;
+  height: 38px;
 }
 
 .additionally__list {
@@ -50,9 +50,8 @@
 .additionally__item {
   display: flex;
   flex-wrap: wrap;
-  min-height: 130px;
   border-top: 1px solid var(--catalog-border);
-  padding: 11px 0 20px 0;
+  padding: 13px 0 20px 0;
 
   &:last-child {
     border-bottom: 1px solid var(--catalog-border);
@@ -118,5 +117,72 @@
 
   .additionally__list {
     border: 1px solid var(--special-grey);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additionally {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 87px;
+  }
+
+  .additionally__caption {
+    padding: 77px 0 24px 0;
+
+    &::after {
+      width: 957px;
+      top: 100px;
+      left: 373px;
+    }
+
+    &::before {
+      width: 76px;
+      top: 100px;
+      left: -116px;
+    }
+  }
+
+  .additionally__item {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 894px;
+    padding: 15px 0 16px 0;
+
+    &:first-child {
+      border-top: 1px solid var(--special-grey);
+    }
+  }
+
+  .additionally__list {
+    width: 896px;
+    height: 288px;
+    border: none;
+    margin-right: 77px;
+  }
+
+  .additionally__button {
+    width: 244px;
+    height: 40px;
+  }
+
+  .additionally__title {
+    margin-bottom: 0;
+    width: 324px;
+    align-self: center;
+  }
+
+  .additionally__text {
+    width: 234px;
+    text-align: start;
+    align-self: center;
+    margin-bottom: -8px;
+  }
+
+  .additionally__price {
+    text-align: start;
+    align-self: center;
+    margin-bottom: -8px;
+    padding-left: 10px;
   }
 }

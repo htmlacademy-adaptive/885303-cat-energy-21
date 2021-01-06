@@ -125,10 +125,15 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    width: 1420px;
+    width: 1440px;
     display: flex;
     justify-content: space-between;
     margin-bottom: -10%;
+  }
+
+  .header__logo-text--img {
+    width: 202px;
+    height: 70px;
   }
 
   .header--desktop {
