@@ -3,9 +3,9 @@
 }
 
 .footer__slogan {
-  @include font ($font-size: 16px, $line-height: 18px);
+  @include font ($font-size: 16px);
   color: var(--special-black);
-  margin-right: 15px;
+  margin-right: 18px;
 }
 
 .footer__adress {
@@ -48,19 +48,19 @@
   display: flex;
   justify-content: space-around;
   width: 200px;
-  padding: 21px 0 12px;
+  padding: 23px 0 12px;
 }
 
 .footer__coopyright-wrap {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 21px;
+  padding-top: 23px;
   padding-bottom: 14px;
 }
 
 .footer__logo {
-  padding: 40px 0 27px;
+  padding: 41px 0 27px;
 }
 
 .footer__logo-link {

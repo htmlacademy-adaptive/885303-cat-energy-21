@@ -1,7 +1,8 @@
 .slider {
   display: block;
+  position: relative;
   background-color: var(--basic-light-grey);
-  padding-bottom: 25px;
+  padding-bottom: 33px;
 }
 
 .slider__button {
@@ -11,12 +12,13 @@
 
 .slider__image {
   display: block;
-  margin-bottom: 23px;
+  margin-bottom: 33px;
 }
 
 .slider__wrap {
   display: flex;
   justify-content: space-around;
+  padding: 0 48px 0 52px;
 }
 
 .slider__scale {
@@ -36,6 +38,13 @@
   width: 35px;
   height: 6px;
   border-radius: 15px;
+}
+
+.slider__picture--absolute {
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: $tablet-width) {
