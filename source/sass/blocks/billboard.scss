@@ -2,19 +2,22 @@
   display: flex;
   min-height: 480px;
   background: url("../img/cat-billboard.png") no-repeat;
+  padding: 0 20px 0;
 }
 
 .billboard__title {
   @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
   color: var(--basic-white);
   text-align: center;
-  padding-top: 20px;
+  padding-top: 27px;
+  margin-bottom: 25px;
 }
 
 .billboard__subtitle {
   @include font ($font-size: 14px, $line-height: 14px);
   color: var(--basic-white);
   text-align: center;
+  margin-bottom: 29px;
 }
 
 .billboard__more {

@@ -2,11 +2,13 @@
   min-height: 430px;
   background-color: var(-basic-white);
   padding-top: 27px;
+  padding-bottom: 34px;
 }
 
 .features__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
   color: var(--basic-black);
+  margin-bottom: 27px;
 }
 
 .features__list {
@@ -14,20 +16,28 @@
 }
 
 .features__step {
-  position: relative;
+  display: flex;
   min-height: 60px;
-  margin-top: 20px;
-  padding-left: 75px;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 60px;
-    background-color: var(--basic-green);
-    left: 0;
-    top: 0;
-  }
+.features__step-square {
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  background-color: var(--basic-green);
+  align-self: center;
+  margin-right: 20px;
+}
+
+.features__step-picture {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.features__step-text {
+  width: 200px;
+  margin-bottom: 13px;
 }
 
 @media (min-width: $tablet-width) {

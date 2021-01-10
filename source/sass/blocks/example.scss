@@ -7,32 +7,65 @@
 .example__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
   color: var(--basic-black);
-  margin-bottom: 33px;
+  margin-bottom: 34px;
 }
 
 .example__text {
-  margin-bottom: 25px;
+  width: 279px;
+  margin-bottom: 24px;
 }
 
 .example__progress {
-  margin: 0 auto;
-  margin-bottom: 25px;
+  width: 100%;
+  margin-bottom: 8px;
 
-  tr:first-child {
-    @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
+
+  td:first-child {
+    @include font ($font-size: 24px, $line-height: 24px);
+    width: 125px;
     text-align: center;
+    border-radius: 5px;
+    border: 1px solid var(--special-grey);
+    padding: 14px 0 15px 0;
   }
 
-  tr:nth-child(2n) {
+  td:nth-child(2n) {
     font-size: 12px;
     line-height: 12px;
+    text-transform: lowercase;
     text-align: center;
   }
+}
+
+.example__value {
+  display: flex;
+  flex-direction: column;
+  width: 123px;
+  align-items: center;
+}
+
+.example__time {
+  display: flex;
+  flex-direction: column;
+  width: 126px;
+  align-items: center;
+}
+
+.example__description {
+  display: block;
+  width: 83px;
+  transform: translateY(-10px);
+  background-color: var(--basic-light-grey);
 }
 
 .example__total {
   @include font ($font-size: 14px);
   text-align: center;
+}
+
+tbody {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: $tablet-width) {
