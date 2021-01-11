@@ -37,6 +37,7 @@
   .billboard {
     width: 768px;
     background-image: none;
+    text-align: center;
   }
 
   .billboard__title {
@@ -44,6 +45,8 @@
     color: var(--basic-black);
     text-align: left;
     margin-bottom: 41px;
+    padding-top: 50px;
+    padding-left: 98px;
   }
 
   .billboard__subtitle {
@@ -51,18 +54,23 @@
     position: relative;
     color: var(--basic-black);
     text-align: left;
+    padding-left: 98px;
+    margin-bottom: 21px;
   }
 
   .billboard__image {
-    width: 709px;
+    width: 718px;
     height: 609px;
+    padding-left: 10px;
   }
 
   .billboard__more {
+    @include font ();
     position: absolute;
     width: 244px;
     height: 54px;
-    top: 320px;
+    top: 360px;
+    left: 112px;
   }
 }
 
