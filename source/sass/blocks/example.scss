@@ -7,12 +7,12 @@
 .example__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
   color: var(--basic-black);
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 }
 
 .example__text {
-  width: 279px;
-  margin-bottom: 24px;
+  width: 286px;
+  margin-bottom: 22px;
 }
 
 .example__progress {
@@ -53,7 +53,7 @@
 
 .example__description {
   display: block;
-  width: 83px;
+  width: 82px;
   transform: translateY(-10px);
   background-color: var(--basic-light-grey);
 }
@@ -81,6 +81,7 @@ tbody {
   }
 
   .example__text {
+    width: 676px;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 54px;
@@ -93,13 +94,14 @@ tbody {
   }
 
   .example__progress {
+    width: 50%;
     margin: 0;
 
-    tr:first-child {
-      @include font ($font-size: 30px, $line-height: 37px, $text-transform: inherit);
+    td:first-child {
+      @include font ($font-size: 30px, $line-height: 37px);
     }
 
-    tr:nth-child(2n) {
+    td:nth-child(2n) {
       font-size: 14px;
       line-height: 14px;
     }
@@ -107,6 +109,10 @@ tbody {
 
   .example__title {
     @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
-    margin-bottom: 63px;
+    margin-bottom: 64px;
+  }
+
+  .example__description {
+    background-color: var(--basic-white);
   }
 }

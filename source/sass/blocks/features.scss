@@ -37,14 +37,14 @@
 
 .features__step-text {
   width: 200px;
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 }
 
 @media (min-width: $tablet-width) {
   .features {
     border-bottom: 1px solid var(--tablet-border);
     padding-top: 13px;
-    padding-bottom: 50px; 
+    padding-bottom: 50px;
   }
 
   .features__list {
@@ -54,7 +54,7 @@
 
     &:nth-child(2n) {
       margin-right: 78px;
-    }    
+    }
   }
 
   .features__step {
@@ -64,7 +64,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     width: 247px;
-    height: 280px;    
+    height: 280px;
     padding-left: 0;
     font-size: 16px;
     line-height: 24px;
