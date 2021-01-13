@@ -1,12 +1,17 @@
 .example {
   background-color: var(--basic-light-grey);
-  padding-top: 27px;
+  padding-top: 17px;
   padding-bottom: 40px;
+}
+
+.example__container {
+  @include wrapper();
 }
 
 .example__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
-  color: var(--basic-black);
+  @include clear(); 
+  color: var(--basic-black);  
   margin-bottom: 33px;
 }
 
@@ -68,6 +73,54 @@ tbody {
   justify-content: space-between;
 }
 
+.example__slider {
+  display: block;
+  position: relative;
+  background-color: var(--basic-light-grey);
+  padding-bottom: 33px;
+}
+
+.example__button {
+  @include font ($font-size: 16px, $line-height: 20px, $text-transform: uppercase);
+  border: none;
+}
+
+.example__image {
+  display: block;
+  margin-bottom: 33px;
+}
+
+.example__slider-wrap {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 48px 0 52px;
+}
+
+.example__scale {
+  display: flex;
+  border: 1px solid var(--special-grey);
+  border-radius: 15px;
+  width: 84px;
+  height: 14px;
+  background-color: var(--basic-white);
+  align-self: center;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.example__bar {
+  background-color: var(--basic-green);
+  width: 35px;
+  height: 6px;
+  border-radius: 15px;
+}
+
+.example__picture--absolute {
+  position: absolute;  
+  top: 0;
+  left: 0;
+}
+
 @media (min-width: $tablet-width) {
   .example {
     background-color: var(--basic-white);
@@ -114,5 +167,37 @@ tbody {
 
   .example__description {
     background-color: var(--basic-white);
+  }
+
+  .example__button {
+    @include font ($font-size: 20px, $line-height: 30px);
+  }
+
+  .example__scale {
+    width: 428px;
+    height: 6px;
+    background-color: var(--scale-bg-grey);
+    margin: 0 13px 0;
+  }
+
+  .example__slider-wrap {
+    justify-content: center;
+  }
+
+  .example__bar {
+    background-color: var(--basic-green);
+    width: 34px;
+    height: 34px;
+    border: 13px solid var(--basic-white);
+    border-radius: 50px;
+  }
+
+  .example__image {
+    width: 50%;
+  }
+
+  .example__picture {
+    width: 50%;
+    min-height: 620px;
   }
 }

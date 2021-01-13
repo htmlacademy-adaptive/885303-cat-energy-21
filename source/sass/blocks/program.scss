@@ -1,5 +1,11 @@
 .program {
-  @include container ($margin-top: 20px);
+  margin-top: 20px;
+}
+
+.program__list {  
+  @include clear();
+  @include wrapper();
+  list-style: none;
 }
 
 .program__wrap {
@@ -12,7 +18,7 @@
 .program__title {
   @include font ($font-size: 24px, $line-height: 37px);
   color: var(--basic-black);
-  margin-top: 11px;
+  margin-top: 10px;
 }
 
 .program__catalog {
@@ -42,6 +48,7 @@
   grid-template-rows: 78px 126px 23px;
   grid-template-columns: 71px auto;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .program__image {
@@ -55,6 +62,7 @@
 }
 
 .program__text {
+  @include clear();
   grid-row: 2 / 3;
   grid-column: 1 / 3;
 }

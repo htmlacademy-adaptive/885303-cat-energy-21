@@ -1,12 +1,16 @@
 .billboard {
+  @include wrapper();
+  @include clear();
   display: flex;
   min-height: 480px;
   background: url("../img/cat-billboard.png") no-repeat;
-  padding: 0 20px 0;
+  background-size: 100% auto;
 }
+
 
 .billboard__title {
   @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
+  @include clear();
   color: var(--basic-white);
   text-align: center;
   padding-top: 27px;
@@ -26,11 +30,20 @@
   background-color: var(--basic-green);
   color: var(--basic-white);
   text-decoration: none;
-  width: 280px;
-  height: 40px;
+  max-width: 280px;
+  min-height: 40px;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  padding: 5px;
+}
+
+.billboard__wrap {
+  @include wrapper();  
+}
+
+.billboard__picture {
+  @include clear();
 }
 
 @media (min-width: $tablet-width) {
@@ -39,7 +52,7 @@
     background-image: none;
     text-align: center;
   }
-
+  
   .billboard__title {
     @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
     color: var(--basic-black);

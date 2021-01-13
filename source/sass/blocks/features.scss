@@ -1,17 +1,20 @@
 .features {
+  @include clear();
+  @include wrapper();
   min-height: 430px;
-  background-color: var(-basic-white);
-  padding-top: 27px;
+  background-color: var(-basic-white);  
   padding-bottom: 34px;
 }
 
 .features__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
   color: var(--basic-black);
+  margin-top: 25px;
   margin-bottom: 27px;
 }
 
 .features__list {
+  @include clear();
   list-style: none;
 }
 
