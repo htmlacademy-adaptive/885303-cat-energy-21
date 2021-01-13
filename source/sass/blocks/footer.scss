@@ -19,10 +19,12 @@
 }
 
 .footer__wrap {
+  @include wrapper();
   display: flex;
   flex-direction: row;
   min-height: 114px;
-  padding: 31px 19px 13px;
+  padding-top: 31px;
+  padding-bottom: 13px;
 }
 
 .footer__wrap--form {
@@ -71,6 +73,10 @@
 .footer__iframe {
   width: 320px;
   height: 362px;
+}
+
+.footer__wrapper {
+  @include wrapper();
 }
 
 @media (min-width: $tablet-width) {

@@ -1,7 +1,6 @@
 .example {
   background-color: var(--basic-light-grey);
   padding-top: 17px;
-  padding-bottom: 40px;
 }
 
 .example__container {
@@ -10,13 +9,13 @@
 
 .example__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
-  @include clear(); 
-  color: var(--basic-black);  
+  @include clear();
+  color: var(--basic-black);
   margin-bottom: 33px;
 }
 
 .example__text {
-  width: 286px;
+  width: 100%;
   margin-bottom: 22px;
 }
 
@@ -100,7 +99,7 @@ tbody {
   display: flex;
   border: 1px solid var(--special-grey);
   border-radius: 15px;
-  width: 84px;
+  max-width: 84px;
   height: 14px;
   background-color: var(--basic-white);
   align-self: center;
@@ -116,7 +115,7 @@ tbody {
 }
 
 .example__picture--absolute {
-  position: absolute;  
+  position: absolute;
   top: 0;
   left: 0;
 }
