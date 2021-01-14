@@ -1,4 +1,6 @@
 .form {
+  @include wrapper();
+
   .form__caption {
     @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
     color: var(--basic-black);

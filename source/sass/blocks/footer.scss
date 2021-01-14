@@ -21,6 +21,7 @@
 .footer__wrap {
   @include wrapper();
   display: flex;
+  justify-content: center;
   min-height: 114px;
   padding-top: 12px;
   padding-bottom: 13px;
@@ -37,15 +38,7 @@
 
 .footer__social-item {
   list-style: none;
-
-  &:first-child {
-    margin-left: 73px;
-    margin-right: 36px;
-  }
-
-  &:nth-child(2n) {
-    margin-right: 33px;
-  }
+  margin: 0 17px;
 }
 
 .footer__social {
@@ -59,7 +52,9 @@
   @include clear();
   @include wrapper();
   display: flex;
-  padding-top: 23px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
   padding-bottom: 12px;
 }
 

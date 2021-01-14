@@ -1,6 +1,6 @@
 .example {
   background-color: var(--basic-light-grey);
-  padding-top: 17px;
+  padding-top: 14px;
 }
 
 .example__container {
@@ -22,6 +22,13 @@
 .example__progress {
   width: 100%;
   margin-bottom: 5px;
+
+  tbody {
+    display: flex;
+    justify-content: space-between;
+    max-width: 280px;
+    margin: 0 auto;
+  }
 
   td:first-child {
     @include font ($font-size: 24px, $line-height: 24px);
@@ -67,10 +74,6 @@
   text-align: center;
 }
 
-tbody {
-  display: flex;
-  justify-content: space-between;
-}
 
 .example__slider {
   display: block;
@@ -79,11 +82,11 @@ tbody {
   padding-bottom: 37px;
 }
 
-.example_container {  
-  position: relative;  
+.example_container {
+  position: relative;
 }
 
-.example__picture { 
+.example__picture {
   text-align: center;
 
   &--absolute {
@@ -99,14 +102,16 @@ tbody {
   border: none;
 }
 
-.example__image {  
-  margin-bottom: 33px;  
+.example__image {
+  margin-bottom: 33px;
 }
 
 .example__slider-wrap {
   display: flex;
   justify-content: space-around;
+  max-width: 280px;
   padding: 0 15px 0 19px;
+  margin: 0 auto;
 }
 
 .example__scale {

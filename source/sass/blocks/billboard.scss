@@ -1,7 +1,6 @@
 .billboard {
   @include wrapper();
   @include clear();
-  display: flex;
   min-height: 480px;
   background: url("../img/cat-billboard.png") no-repeat;
   background-size: 100% auto;
@@ -44,6 +43,14 @@
 
 .billboard__picture {
   @include clear();
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 430px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: $tablet-width) {
