@@ -21,8 +21,7 @@
 
 .example__progress {
   width: 100%;
-  margin-bottom: 8px;
-
+  margin-bottom: 5px;
 
   td:first-child {
     @include font ($font-size: 24px, $line-height: 24px);
@@ -30,7 +29,7 @@
     text-align: center;
     border-radius: 5px;
     border: 1px solid var(--special-grey);
-    padding: 14px 0 15px 0;
+    padding: 14px 0 19px 0;
   }
 
   td:nth-child(2n) {
@@ -64,6 +63,7 @@
 
 .example__total {
   @include font ($font-size: 14px);
+  @include clear();
   text-align: center;
 }
 
@@ -76,7 +76,22 @@ tbody {
   display: block;
   position: relative;
   background-color: var(--basic-light-grey);
-  padding-bottom: 33px;
+  padding-bottom: 37px;
+}
+
+.example_container {  
+  position: relative;  
+}
+
+.example__picture { 
+  text-align: center;
+
+  &--absolute {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .example__button {
@@ -84,15 +99,14 @@ tbody {
   border: none;
 }
 
-.example__image {
-  display: block;
-  margin-bottom: 33px;
+.example__image {  
+  margin-bottom: 33px;  
 }
 
 .example__slider-wrap {
   display: flex;
   justify-content: space-around;
-  padding: 0 48px 0 52px;
+  padding: 0 15px 0 19px;
 }
 
 .example__scale {
@@ -114,11 +128,6 @@ tbody {
   border-radius: 15px;
 }
 
-.example__picture--absolute {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
 @media (min-width: $tablet-width) {
   .example {

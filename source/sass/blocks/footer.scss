@@ -18,17 +18,30 @@
   margin-bottom: 10px;
 }
 
-.footer__wrap {
-  @include wrapper();
+.footer__wrap { 
+  @include wrapper(); 
   display: flex;
   flex-direction: row;
   min-height: 114px;
-  padding-top: 31px;
+  padding-top: 12px;
   padding-bottom: 13px;
+  background-color: var(--basic-white);
 }
 
 .footer__wrap--form {
   background-color: var(--basic-grey);
+}
+
+.footer__wrapper {
+  position: relative;
+}
+
+.footer__map-picture {
+  @include clear();  
+}
+
+.footer__map-img {
+  width: 100%;
 }
 
 .footer__social-item {
@@ -47,6 +60,8 @@
 }
 
 .footer__social-list {
+  @include clear();
+  @include wrapper();
   display: flex;
   justify-content: space-around;
   width: 200px;
@@ -54,6 +69,8 @@
 }
 
 .footer__coopyright-wrap {
+  @include clear();
+  @include wrapper();
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,6 +79,8 @@
 }
 
 .footer__logo {
+  @include clear();
+  @include wrapper();
   padding: 42px 0 27px;
 }
 
@@ -71,12 +90,10 @@
 }
 
 .footer__iframe {
-  width: 320px;
-  height: 362px;
-}
-
-.footer__wrapper {
-  @include wrapper();
+  position: absolute;
+  width: 100%;  
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: $tablet-width) {
