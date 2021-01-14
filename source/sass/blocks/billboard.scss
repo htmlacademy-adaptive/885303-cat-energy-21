@@ -39,7 +39,7 @@
 }
 
 .billboard__wrap {
-  @include wrapper();  
+  @include wrapper();
 }
 
 .billboard__picture {
@@ -52,7 +52,7 @@
     background-image: none;
     text-align: center;
   }
-  
+
   .billboard__title {
     @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
     color: var(--basic-black);
@@ -84,6 +84,14 @@
     height: 54px;
     top: 360px;
     left: 112px;
+
+    &:hover {
+      background-color: var(--button-hover-green);
+    }
+
+    &:active span {
+      opacity: 0.3;
+    }
   }
 }
 

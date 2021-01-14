@@ -1,7 +1,7 @@
 .header {
   display: flex;
   flex-direction: column;
-  background-color: var(--basic-white);  
+  background-color: var(--basic-white);
 }
 
 .header__wrap {
@@ -12,7 +12,7 @@
   padding: 0 20px;
 }
 
-.header__nav-list {  
+.header__nav-list {
   @include font ($font-weight: 500);
   @include clear();
   list-style: none;
@@ -24,6 +24,14 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--tablet-border);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .header__nav-link {
