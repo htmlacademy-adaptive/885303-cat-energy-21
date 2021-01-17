@@ -9,7 +9,7 @@
 .features__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
   color: var(--basic-black);
-  margin-top: 25px;
+  margin-top: 26px;
   margin-bottom: 40px;
 }
 
@@ -26,6 +26,7 @@
 
 .features__step-text {
   @include clear();
+  margin-top: 2px;
 }
 
 .features__step-square {
@@ -45,6 +46,7 @@
 
 @media (min-width: $tablet-width) {
   .features {
+    @include wrapper ($padding: 0 30px)
     border-bottom: 1px solid var(--tablet-border);
     padding-top: 13px;
     padding-bottom: 50px;
@@ -127,7 +129,7 @@
     width: 80px;
     height: 80px;
     align-self: flex-start;
-    margin-bottom: 16px;
+    margin-bottom: 29px;
   }
 
   .features__step-picture {
@@ -143,6 +145,7 @@
 
   .features__title {
     @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
+    margin-bottom: 26px;
   }
 }
 

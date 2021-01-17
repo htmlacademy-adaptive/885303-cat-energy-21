@@ -42,7 +42,6 @@
 }
 
 .footer__social {
-  min-height: 64px;
   border-bottom: 1px solid var(--basic-border);
   border-top: 1px solid var(--basic-border);
   align-self: center;
@@ -55,7 +54,7 @@
   justify-content: center;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
 }
 
 .footer__coopyright-wrap {
@@ -64,7 +63,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 14px;
+  padding-top: 12px;
   padding-bottom: 14px;
 }
 
@@ -99,7 +98,7 @@
 
 @media (min-width: $tablet-width) {
   .footer__slogan {
-    @include font ($font-size: 20px, $line-height: 27px);
+    @include font ($font-size: 20px, $line-height: 25px);
     text-align: left;
   }
 
@@ -110,9 +109,14 @@
   }
 
   .footer__wrap {
-    padding: 63px 72px 58px 72px;
+    padding: 47px 72px 41px 72px;
     background-color: var(--basic-white);
     justify-content: space-between;
+
+    span {
+      display: inline-block;
+      margin-top: 21px;
+    }
   }
 
   .footer__wrap--form {
@@ -120,12 +124,15 @@
   }
 
   .footer__container {
+    @include wrapper ($padding: 0 30px);
     display: flex;
     justify-content: space-between;
-    padding: 21px 30px 36px;
+    padding-top: 23px;
+    padding-bottom: 36px;
   }
 
   .footer__social {
+    border: none;
     padding: 0;
   }
 
@@ -161,6 +168,12 @@
     margin-top: -10px;
   }
 
+  .footer__wrapper {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
 
   .footer__iframe {
     width: 100%;
@@ -173,21 +186,23 @@
   }
 
   .footer__social-list {
-    justify-content: flex-start;
-    width: 176px;
-    height: 33px;
     border: none;
+    margin-right: auto;
   }
 
-  .footer__social-item {
-    &:first-child {
-      margin-right: 25px;
-    }
-
-    &:nth-child(2n) {
-      margin-right: 18px;
-    }
+  .footer__logo {
+    margin-right: 104px;
   }
+
+  // .footer__social-item {
+  //   &:first-child {
+  //     margin-right: 25px;
+  //   }
+
+  //   &:nth-child(2n) {
+  //     margin-right: 18px;
+  //   }
+  // }
 }
 
 @media (min-width: $desktop-width) {
