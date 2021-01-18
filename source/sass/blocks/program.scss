@@ -136,11 +136,11 @@
 }
 
 @media (min-width: $desktop-width) {
-  .program__container {    
-    grid-template-rows: 120px 120px 54px;
+  .program__container {
+    grid-template-rows: 145px 93px 54px;
     grid-template-columns: 140px 150px 110px;
     width: 570px;
-    padding: 42px;
+    padding: 42px 42px 42px 52px;
   }
 
   .program {
@@ -159,12 +159,16 @@
     grid-column: 1 / 2;
     width: 100px;
     height: 106px;
+    margin-top: 0;
+    margin-left: 0;
   }
 
   .program__container--grid {
     .program__image--width_height {
       width: 134px;
-      height: 100px;    
+      height: 100px;
+      margin-top: 4px;
+      margin-left: -19px;
     }
   }
 
@@ -177,6 +181,14 @@
     grid-row: 1 / 2;
     grid-column: 2 / 4;
     vertical-align: middle;
+    margin-top: 35px;
+    margin-left: 22px;
+  }
+
+  .program__catalog {
+    &::after {
+      left: 133px;
+    }
   }
 
   .program__wrapper {

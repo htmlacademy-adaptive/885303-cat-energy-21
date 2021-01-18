@@ -150,16 +150,41 @@
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    @include wrapper ($padding: 0 110px);
+  }
   .features__list {
     flex-wrap: nowrap;
+
+    &:nth-child(2n) {
+      margin-right: 15px;
+    }
   }
 
   .features__step {
     width: 230px;
     margin: 0;
+
+    &:first-child::after {
+      right: 0;
+    }
+
+    &:nth-child(2n)::after {
+      right: -15px;
+    }
+
+    &:nth-child(3n)::after {
+      right: -17px;
+    }
+
+    &:last-child::after {
+      right: -18px;
+    }
   }
 
   .features__title {
-    margin-bottom: 32px;
+    @include clear();
+    margin-top: 19px;
+    margin-bottom: 27px;
   }
 }

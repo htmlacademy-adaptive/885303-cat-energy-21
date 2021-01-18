@@ -159,7 +159,7 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    @include wrapper ($padding: 0 110px); 
+    @include wrapper ($padding: 0 110px);
     display: flex;
     justify-content: space-between;
     margin-bottom: -10%;
@@ -178,18 +178,15 @@
     @include font ($line-height: 30px);
   }
 
-  .header__nav-link--white {    
+  .header__nav-link--white {
+    color: var(--basic-white);
     margin-bottom: 0;
 
     &.current {
       &::after {
-        background-color: var(--basic-white);        
+        background-color: var(--basic-white);
       }
     }
-  }
-
-  .header__nav-link--white {
-    color: var(--basic-white);
   }
 
   .header__nav-button {

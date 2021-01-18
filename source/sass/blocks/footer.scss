@@ -185,14 +185,24 @@
     }
   }
 
-  .footer__logo {
-    margin: 0 77px 0 0;
-  }
-
   .footer__social-list {
     border: none;
     margin-right: auto;
   }
+
+  .footer__logo {
+    margin-right: 104px;
+  }
+
+  // .footer__social-item {
+  //   &:first-child {
+  //     margin-right: 25px;
+  //   }
+
+  //   &:nth-child(2n) {
+  //     margin-right: 18px;
+  //   }
+  // }
 }
 
 @media (min-width: $desktop-width) {
