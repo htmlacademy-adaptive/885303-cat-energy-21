@@ -136,11 +136,22 @@
 }
 
 @media (min-width: $desktop-width) {
-  .program__container {
+  .program__container {    
     grid-template-rows: 120px 120px 54px;
     grid-template-columns: 140px 150px 110px;
-    width: 460px;
+    width: 570px;
     padding: 42px;
+  }
+
+  .program {
+    @include wrapper ($padding: 0 110px);
+    padding-top: 103px;
+  }
+
+  .program__list {
+    @include clear();
+    display: flex;
+    justify-content: space-between;
   }
 
   .program__image {
@@ -150,9 +161,16 @@
     height: 106px;
   }
 
+  .program__container--grid {
+    .program__image--width_height {
+      width: 134px;
+      height: 100px;    
+    }
+  }
+
   .program__text {
     grid-row: 2 / 3;
-    grid-column: 1 / 4;
+    grid-column: 1 / 5;
   }
 
   .program__title {

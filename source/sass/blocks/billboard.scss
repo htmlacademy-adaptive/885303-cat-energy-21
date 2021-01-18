@@ -116,27 +116,44 @@
 
 @media (min-width: $desktop-width) {
   .billboard {
-    width: 1200px;
+    width: 100%;  
     min-height: 696px;
     background: url("../img/cat-billboard-desktop.png") no-repeat;
-    background-position: right;
-    background-size: 51%;
+    background-position: 100% 22px;
+    background-size: 50%;
+    padding-left: 0;
   }
 
   .billboard__wrap {
+    @include wrapper ($padding: 0 110px);    
     position: relative;
-    padding-top: 220px;
+    padding-top: 195px;
+  }
+
+  .billboard__title {
+    padding-left: 80px;
+  }
+
+  .billboard__subtitle {
+    padding-left: 80px;
   }
 
   .billboard__image {
     position: absolute;
     width: 552px;
     height: 449px;
-    right: -454px;
-    top: 173px;
+    right: 330px;
+    top: 163px;
+  }
+
+  .billboard__picture {     
+    img {      
+      width: 552px;      
+    }
   }
 
   .billboard__more {
-    top: 494px;
+    top: 478px;
+    left: 190px;
   }
 }
