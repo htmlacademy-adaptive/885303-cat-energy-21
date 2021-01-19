@@ -31,10 +31,10 @@
 
   <!-- SVG-sprite -->
 
-  <header class="header header--desktop wrap">
+  <header class="header">
     <div class="header__wrap">
       <a class="header__logo" href="#">
-        <img class="header__logo-img" src="img\logo-mobile.svg" alt="Логотип интернет-магазина Cat Energy" width="34"
+        <img class="header__logo-img" src="img/logo-mobile.svg" alt="Логотип интернет-магазина Cat Energy" width="34"
           height="38">
       </a>
       <a class="header__logo-text" href="#">
@@ -48,10 +48,11 @@
       <button class="header__nav-button"><span class="visually-hidden">Кнопка отображения навигации
           сайта</span></button>
     </div>
-    <ul class="clear header__nav-list">
-      <li class="header__nav-item"><a class="header__nav-link" href="index.html">Главная</a></li>
-      <li class="header__nav-item"><a class="header__nav-link" href="catalog.html">Каталог продукции</a></li>
-      <li class="header__nav-item"><a class="header__nav-link" href="form.html">Подбор программы</a></li>
+    <nav>
+    <ul class="header__nav-list">
+      <li class="header__nav-item"><a class="header__nav-link header__nav-link--white current" href="#">Главная</a></li>
+      <li class="header__nav-item"><a class="header__nav-link header__nav-link--white" href="catalog.html">Каталог продукции</a></li>
+      <li class="header__nav-item"><a class="header__nav-link header__nav-link--white" href="form.html">Подбор программы</a></li>
     </ul>
     </nav>
   </header>
@@ -60,11 +61,11 @@
 
     <h1 class="visually-hidden">Подбор системы питания для вашего кота Cat Energy</h1>
 
-    <section class="form wrap">
+    <section class="form">
       <div class="form_container">
       <h2 class="form__caption">Подбор программы</h2>
 
-      <p class="clear form__title">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
+      <p class="form__title">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
 
       <form action="https://echo.htmlacademy.ru" method="GET">
 
@@ -103,7 +104,7 @@
         </fieldset>
       </div>
 
-        <fieldset class="clear form__contacts">
+        <fieldset class="form__contacts">
           <legend class="form__contacts-title">Контактные данные (владельца кота)</legend>
 
           <div class="form__container-contacts">
@@ -119,14 +120,14 @@
         </div>
         </fieldset>
 
-        <fieldset class="clear form__comment">
+        <fieldset class="form__comment">
           <legend class="form__comment-title" for="comment">Комментарий</legend>
 
-          <textarea class="clear" name="comment" id="comment" cols="23" rows="5"
+          <textarea name="comment" id="comment" cols="23" rows="5"
             placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
 
-        <fieldset class="clear form__additionally">
+        <fieldset class="form__additionally">
           <legend class="form__additionally-title">Дополнительно</legend>
 
           <div class="form__container-additionally">
@@ -156,7 +157,7 @@
         <div class="form__wrapper-additionally">
         <button class="form__button" type="submit">Отправить заявку</button>
 
-        <p class="clear form__text">* — Обязательные поля</p>
+        <p class="form__text">* — Обязательные поля</p>
       </div>
 
       </div>
@@ -169,29 +170,37 @@
   <footer class="footer">
 
     <section class="footer__map">
-      <div class="footer__wrap footer__wrap--form wrap">
-        <p class="clear footer__slogan">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
-        <p class="clear footer__adress">ул. Большая<br> Конюшенная, д. 19/8<br> Санкт-Петербург</p>
+      <div class="footer__wrap">
+        <p class="footer__slogan">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
+        <p class="footer__adress">ул. Большая<br> Конюшенная, д. 19/8<br> <span>Санкт-Петербург</span></p>
       </div>
 
       <div class="footer__iframe">
+        <p class="footer__map-picture">
+         <picture>
+           <source media="(min-width: 1440px)" srcset="img/location_desktop.jpg">
+           <source media="(min-width: 768px)" srcset="img/location_tablet.jpg">
+          <img class="footer__map-img" src="img/location.jpg" alt="Изображение карты с меткой">
+         </picture>
+        </p>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603625300312!2d30.32085871613576!3d59.93871916905415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1607071171899!5m2!1sru!2sru"
-          width="320" height="362" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          width="320" height="362" frameborder="0" style="border: 0;" allowfullscreen="" aria-hidden="false"
           tabindex="0"></iframe>
       </div>
     </section>
 
-    <div class="footer__container wrap">
-      <section class="footer__logo wrap">
+    <div class="footer__container">
+      <div class="footer__wrapper">
+      <section class="footer__logo">
         <a class="footer__logo-link" href="#">
           <img class="footer__logo-image" src="img/footer-logo.svg" alt="Логотип интернет-магазина Cat Energy"
             width="128" height="24">
         </a>
       </section>
 
-      <section class="footer__social wrap">
-        <ul class="clear footer__social-list">
+      <section class="footer__social">
+        <ul class="footer__social-list">
           <li class="footer__social-item">
             <span class="visually-hidden">Вконтакте</span>
             <a class="footer__social-link footer__social-link--vk" href="https://vk.com/">
@@ -221,15 +230,15 @@
 
       <section class="footer__copyright">
         <div class="footer__coopyright-wrap">
-        <p class="clear footer__copyright-text">HTML Academy</p>
+        <p class="footer__copyright-text">HTML Academy</p>
         <a href="#" class="footer__copyright-logo">
-          <svg width="27" height="34" viewBox="0 0 27 34" fill="#666666" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" />
+          <svg width="27" height="34">
+              <use xlink:href="#icon_logo"></use>
           </svg>
         </a>
       </div>
       </section>
+    </div>
     </div>
   </footer>
 </body>

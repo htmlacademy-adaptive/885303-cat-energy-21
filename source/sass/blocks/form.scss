@@ -4,17 +4,20 @@
   .form__caption {
     @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
     color: var(--basic-black);
+    margin-top: 26px;
+    margin-bottom: 37px;
   }
 
   .form__title {
-    @include font ($font-size: 14px, $line-height: 18px, $text-transform: inherit);
+    @include font ($font-size: 14px, $line-height: 18px);
+    margin-bottom: 9px;
   }
 
   .form__pet-options {
     @include font ($font-size: 16px, $line-height: 18px);
     color: var(--basic-dark-grey);
     border: none;
-    padding: 30px 0 20px;
+    padding: 30px 0 10px;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid var(--basic-border);
@@ -22,10 +25,11 @@
 
   .form__wrap-options {
     display: flex;
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 
     label {
-      margin-right: 15px;
+      @include clear();
+      margin-right: 14px;
       align-self: center;
       flex-shrink: 0;
     }
@@ -56,9 +60,10 @@
 
   .form__selection {
     @include font ($font-size: 16px, $line-height: 18px);
+    @include clear ();
     color: var(--special-dark-grey);
     border: none;
-    padding: 20px 0 20px;
+    padding: 24px 0 20px;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid var(--basic-border);
