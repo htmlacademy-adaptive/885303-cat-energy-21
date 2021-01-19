@@ -62,7 +62,7 @@
   }
 
   .billboard__wrap {
-    @include wrapper ($padding: 0 30px)
+    @include wrapper ($padding: 0 30px);
   }
 
   .billboard__title {
@@ -126,7 +126,7 @@
   }
 
   .billboard__wrap {
-    @include wrapper ($padding: 0 110px);    
+    @include wrapper ($padding: 0 110px);
     position: absolute;
     padding-top: 195px;
   }
@@ -147,9 +147,9 @@
     top: 163px;
   }
 
-  .billboard__picture {     
-    img {      
-      width: 552px;      
+  .billboard__picture {
+    img {
+      width: 552px;
     }
   }
 

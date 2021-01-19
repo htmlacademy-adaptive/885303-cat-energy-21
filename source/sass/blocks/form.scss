@@ -1,8 +1,7 @@
 .form {
-  @include wrapper();
-
   .form__caption {
     @include font ($font-size: 36px, $line-height: 36px, $text-transform: inherit);
+    @include wrapper();
     color: var(--basic-black);
     margin-top: 26px;
     margin-bottom: 37px;
@@ -10,6 +9,7 @@
 
   .form__title {
     @include font ($font-size: 14px, $line-height: 18px);
+    @include wrapper();
     margin-bottom: 9px;
   }
 
@@ -24,6 +24,7 @@
   }
 
   .form__wrap-options {
+    @include wrapper();
     display: flex;
     margin-bottom: 12px;
 
@@ -63,7 +64,7 @@
     @include clear ();
     color: var(--special-dark-grey);
     border: none;
-    padding: 24px 0 20px;
+    padding: 24px 0 18px;
     display: flex;
     flex-direction: column;
     border-bottom: 1px solid var(--basic-border);
@@ -89,6 +90,7 @@
 
   .form__contacts {
     @include font ($font-size: 16px, $line-height: 18px);
+    @include clear ();
     color: var(--basic-dark-grey);
     display: flex;
     flex-direction: column;
@@ -132,12 +134,25 @@
 
   .form__contacts-title {
     @include font ($font-size: 24px, $line-height: 26px, $text-transform: none);
+    @include clear();
+    position: relative;
     color: var(--special-dark-grey);
     text-align: left;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      top: 10px;
+      left: 201px;
+      background-color: var(--basic-green);
+    }
   }
 
   .form__comment {
     @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
+    @include clear ();
     color: var(--basic-black);
     border: none;
 
@@ -243,6 +258,7 @@
 
     .form__pet-options {
       @include font ($line-height: 30px);
+      @include clear ();
       margin-bottom: 35px;
     }
 

@@ -88,7 +88,7 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    @include wrapper ($margin: 0 auto, $padding: 0 30px)
+    @include wrapper ($margin: 0 auto, $padding: 0 30px);
     flex-direction: row;
     justify-content: space-between;
   }
