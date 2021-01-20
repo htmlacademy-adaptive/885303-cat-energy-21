@@ -15,16 +15,15 @@
 
   .form__pet-options {
     @include font ($font-size: 16px, $line-height: 18px);
+    @include wrapper();
     color: var(--basic-dark-grey);
     border: none;
-    padding: 30px 0 10px;
-    display: flex;
-    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 10px;    
     border-bottom: 1px solid var(--basic-border);
   }
 
-  .form__wrap-options {
-    @include wrapper();
+  .form__wrap-options {    
     display: flex;
     margin-bottom: 12px;
 
@@ -62,13 +61,12 @@
   .form__selection {
     @include font ($font-size: 16px, $line-height: 18px);
     @include clear ();
+    @include wrapper();
     color: var(--special-dark-grey);
     border: none;
-    padding: 24px 0 18px;
-    display: flex;
-    flex-direction: column;
-    border-bottom: 1px solid var(--basic-border);
-    margin-bottom: 30px;
+    padding-top: 24px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--basic-border);    
   }
 
   .form__wrap-selection {
@@ -91,26 +89,26 @@
   .form__contacts {
     @include font ($font-size: 16px, $line-height: 18px);
     @include clear ();
-    color: var(--basic-dark-grey);
-    display: flex;
-    flex-direction: column;
+    @include wrapper ();
+    color: var(--basic-dark-grey);    
     border: none;
-    padding: 30px 0 24px;
+    padding-top: 24px;
+    padding-bottom: 12px;
 
     .form__wrap-contacts {
       display: flex;
       margin-bottom: 14px;
 
       label {
-        margin-right: 15px;
+        margin-right: 11px;
         align-self: center;
         flex-shrink: 0;
       }
 
       input {
         width: 100%;
-        height: 40px;
-        padding: 14px;
+        height: 45px;
+        padding: 16px 14px 14px;
         border: 1px solid var(--special-form-border);
 
         &::-webkit-input-placeholder {
@@ -138,13 +136,14 @@
     position: relative;
     color: var(--special-dark-grey);
     text-align: left;
+    margin-bottom: 35px;
 
     &::after {
       content: "";
       position: absolute;
       width: 100%;
       height: 3px;
-      top: 10px;
+      top: 17px;
       left: 201px;
       background-color: var(--basic-green);
     }
@@ -153,6 +152,7 @@
   .form__comment {
     @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
     @include clear ();
+    @include wrapper ();
     color: var(--basic-black);
     border: none;
 
@@ -165,7 +165,7 @@
       width: 280px;
       height: 150px;
       padding: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
       border: 1px solid var(--special-form-border);
 
       &::-webkit-input-placeholder {
@@ -194,18 +194,33 @@
     @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
     color: var(--basic-black);
     border: none;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 150%;
+      height: 3px;
+      top: 15px;
+      left: 142px;
+      background-color: var(--basic-green);
+    }
   }
 
   .form__additionally {
     @include font ($font-size: 16px, $line-height: 18px);
+    @include clear ();
+    @include wrapper ();
     color: var(--basic-black);
     display: flex;
     flex-direction: column;
     border: none;
 
     .form__wrap-additionally {
+      @include clear ();
+      @include wrapper ();
       display: flex;
-      margin-bottom: 15px;
+      margin-bottom: 16px;
     }
 
     input {
@@ -222,7 +237,18 @@
 
   .form__additionally-title {
     @include font ($font-size: 24px, $line-height: 26px, $text-transform: none);
-    margin-bottom: 30px;
+    margin-bottom: 36px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      top: 15px;
+      left: 164px;
+      background-color: var(--basic-green);
+    }
   }
 
   .form__button {
@@ -427,7 +453,7 @@
         .form__wrap-contacts {
           margin-bottom: 45px;
 
-          label {
+          h2 {
             margin-right: 20px;
           }
 
