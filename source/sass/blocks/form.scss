@@ -19,11 +19,11 @@
     color: var(--basic-dark-grey);
     border: none;
     padding-top: 30px;
-    padding-bottom: 10px;    
+    padding-bottom: 10px;
     border-bottom: 1px solid var(--basic-border);
   }
 
-  .form__wrap-options {    
+  .form__wrap-options {
     display: flex;
     margin-bottom: 12px;
 
@@ -66,7 +66,7 @@
     border: none;
     padding-top: 24px;
     padding-bottom: 18px;
-    border-bottom: 1px solid var(--basic-border);    
+    border-bottom: 1px solid var(--basic-border);
   }
 
   .form__wrap-selection {
@@ -90,7 +90,7 @@
     @include font ($font-size: 16px, $line-height: 18px);
     @include clear ();
     @include wrapper ();
-    color: var(--basic-dark-grey);    
+    color: var(--basic-dark-grey);
     border: none;
     padding-top: 24px;
     padding-bottom: 12px;
@@ -218,15 +218,18 @@
 
     .form__wrap-additionally {
       @include clear ();
-      @include wrapper ();
       display: flex;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
+
+      &:last-child {
+        margin-bottom: 35px;
+      }
     }
 
     input {
-      width: 26px;
-      height: 26px;
-      margin-right: 18px;
+      width: 30px;
+      height: 30px;
+      margin-right: 16px;
       align-self: center;
     }
 
@@ -235,9 +238,13 @@
     }
   }
 
+  .form__wrapper-additionally {
+    @include wrapper ();
+  }
+
   .form__additionally-title {
     @include font ($font-size: 24px, $line-height: 26px, $text-transform: none);
-    margin-bottom: 36px;
+    margin-bottom: 34px;
     position: relative;
 
     &::after {
@@ -254,9 +261,10 @@
   .form__button {
     @include font ($font-size: 16px, $line-height: 20px);
     @include button();
+    @include clear();
     width: 280px;
     height: 40px;
-    margin-bottom: 21px;
+    margin-bottom: 8px;
   }
 
   .form__text {
@@ -269,23 +277,29 @@
 
   @media (min-width: $tablet-width) {
     .form_container {
+      @include wrapper ($padding: 0 30px);
       padding: 0 41px 0;
     }
 
     .form__caption {
       @include font ($font-size: 60px, $line-height: 60px, $text-transform: none);
       margin-bottom: 55px;
+      margin-top: 50px;
+      padding-left: 28px;
     }
 
     .form__title {
       @include font ($line-height: 30px);
-      margin-bottom: 38px;
+      margin-bottom: 68px;
+      padding-left: 28px;
     }
 
     .form__pet-options {
       @include font ($line-height: 30px);
       @include clear ();
-      margin-bottom: 35px;
+      border-bottom: none;
+      margin-bottom: 50px;
+      padding-left: 28px;
     }
 
     .form__wrap-options {
@@ -304,8 +318,9 @@
 
     .form__selection {
       border: 1px solid var(--special-form-border);
-      padding: 19px 27px 24px;
-      margin-bottom: 76px;
+      padding: 24px 27px 26px;
+      margin-bottom: 52px;
+      margin-left: 30px;
     }
 
     .form__wrap-selection {
@@ -316,15 +331,28 @@
       }
 
       input {
-        margin-right: 18px;
+        margin-right: 20px;
         width: 40px;
         height: 40px;
       }
     }
 
+    .form__wrap-contacts {
+      @include font ($line-height: 30px);
+      margin-bottom: 27px;
+
+      label {
+
+      }
+    }
+
+    .form__contacts {
+      padding-left: 30px;
+    }
+
     .form__contacts-title {
       @include font ($font-size: 36px, $line-height: 36px, $text-transform: none);
-      margin-bottom: 52px;
+      margin-bottom: 78px;
     }
 
     .form__comment {
@@ -363,6 +391,7 @@
     }
 
     .form__wrapper-additionally {
+      @include wrapper();
       display: flex;
 
       .form__button {
@@ -380,6 +409,7 @@
 
 
       .form__container-additionally {
+        @include clear();
         display: flex;
         flex-wrap: wrap;
         margin-bottom: 53px;
