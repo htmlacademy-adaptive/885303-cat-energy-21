@@ -169,8 +169,7 @@
   }
 
   .footer__wrapper {
-    display: flex;
-       
+    display: flex;       
   }
 
 
@@ -185,12 +184,15 @@
   }
 
   .footer__social-list {
-    border: none;
-    margin-right: auto;
+    border: none;    
+  }
+
+  .footer__social-item {
+    margin: 0 11px;
   }
 
   .footer__logo {
-    margin-right: 114px;
+    margin-right: 127px;
     margin-left: 0;
   }
 }

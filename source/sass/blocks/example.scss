@@ -258,3 +258,19 @@
     height: auto;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .example {
+    @include wrapper ($padding: 0 110px);
+    width: 1440px;
+    padding-top: 15px;
+  }
+
+  .example__title {
+    padding: 0;
+  }
+
+  .example__wrapper {
+    display: flex;
+  }
+}

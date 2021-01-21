@@ -152,6 +152,7 @@
 @media (min-width: $desktop-width) {
   .features {
     @include wrapper ($padding: 0 110px);
+    width: 1440px;
   }
 
   .features__list {
