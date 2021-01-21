@@ -155,15 +155,18 @@
   }
 
   .example__container {
-    @include wrapper ($padding: 0 30px);
+    @include wrapper ($padding: 0);
   }
 
   .example__wrap {
+    @include wrapper ($padding: 0 30px);
     display: flex;
     justify-content: space-between;
   }
 
-  .example__text {
+   .example__text {    
+    @include clear();  
+    padding: 0 30px;
     width: 676px;
     font-size: 16px;
     line-height: 24px;
@@ -171,17 +174,22 @@
   }
 
   .example__total {
-    @include font ();
+    @include font();
     width: 183px;
-    text-align: right;
+    text-align: right;    
   }
 
   .example__progress {
-    width: 708px;
-    margin: 0;
+    width: auto;      
+
+    tbody {      
+      max-width: 366px;
+      margin: 0;          
+    }
 
     td:first-child {
       @include font ($font-size: 30px, $line-height: 37px);
+      width: 162px;      
     }
 
     td:nth-child(2n) {
@@ -190,8 +198,13 @@
     }
   }
 
+  .example__time {
+    width: 100%;
+  }
+
   .example__title {
     @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
+    @include wrapper ($padding: 0 30px);
     margin-bottom: 64px;
   }
 
