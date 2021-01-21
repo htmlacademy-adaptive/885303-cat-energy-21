@@ -109,7 +109,7 @@
   }
 
   .footer__wrap {
-    padding: 47px 72px 41px 72px;
+    padding: 38px 72px 41px 72px;
     background-color: var(--basic-white);
     justify-content: space-between;
 
@@ -170,8 +170,7 @@
 
   .footer__wrapper {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+       
   }
 
 
@@ -191,18 +190,9 @@
   }
 
   .footer__logo {
-    margin-right: 104px;
+    margin-right: 114px;
+    margin-left: 0;
   }
-
-  // .footer__social-item {
-  //   &:first-child {
-  //     margin-right: 25px;
-  //   }
-
-  //   &:nth-child(2n) {
-  //     margin-right: 18px;
-  //   }
-  // }
 }
 
 @media (min-width: $desktop-width) {
