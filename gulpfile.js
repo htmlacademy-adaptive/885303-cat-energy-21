@@ -4,6 +4,8 @@ const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
+const gulpPlumber = require("gulp-plumber");
+// const imagemin = reguire("gulp-imagemin");
 const sync = require("browser-sync").create();
 
 // Styles
@@ -45,6 +47,26 @@ const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
 }
+
+//Image
+
+// const images = () => {
+//   return gulp.src("source/img/**/*.{.jpg,png,svg}")
+//     .pipe(imagemin([
+//       imagemin.mozjpeg({progressive: true}),
+//       imagemin.optipng({optimizationLevel: 3}),
+//       imagemin.svgo()
+//     ]))
+//     .pipe(gulp.dest("dist/img"))
+// }
+
+// exports.images = images;
+
+//WebP
+
+// const createWebP = () => {
+//   return
+// }
 
 exports.default = gulp.series(
   styles, server, watcher

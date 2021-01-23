@@ -153,6 +153,7 @@
   .features {
     @include wrapper ($padding: 0 110px);
     width: 1440px;
+    border-bottom: none;
   }
 
   .features__list {

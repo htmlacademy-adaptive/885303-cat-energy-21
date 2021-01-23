@@ -165,9 +165,9 @@
     justify-content: space-between;
   }
 
-   .example__text {    
-    @include clear();  
-    padding: 0 30px;    
+   .example__text {
+    @include clear();
+    padding: 0 30px;
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 51px;
@@ -181,16 +181,16 @@
   }
 
   .example__progress {
-    width: auto;      
+    width: auto;
 
-    tbody {      
+    tbody {
       max-width: 366px;
-      margin: 0;          
+      margin: 0;
     }
 
     td:first-child {
       @include font ($font-size: 30px, $line-height: 37px);
-      width: 162px;      
+      width: 162px;
     }
 
     td:nth-child(2n) {
@@ -250,7 +250,7 @@
     max-width: 677px;
     height: 520px;
     margin-top: 46px;
-    margin-bottom: 0;    
+    margin-bottom: 0;
   }
 
   .example__picture {
@@ -263,14 +263,55 @@
   .example {
     @include wrapper ($padding: 0 110px);
     width: 1440px;
-    padding-top: 15px;
+    padding-top: 12px;
+  }
+
+  .example__container {
+    display: flex;
+    margin-bottom: -35px;
+  }
+
+  .example__wrapper {
+    width: 436px;
   }
 
   .example__title {
-    padding: 0;
+    @include clear();
+    margin-bottom: 145px;
+  }
+
+  .example__text {
+    @include clear();
+    margin-bottom: 68px;
+  }
+
+  .example__wrap {
+    @include clear();
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .example__total {
+    width: 100%;
   }
 
   .example__wrapper {
     display: flex;
+    flex-direction: column;
+    margin-right: 50px;
+  }
+
+  .example__value {
+    width: 436px;
+  }
+
+  .example__time {
+    width: 436px;
+  }
+
+  .example__progress {
+    td:first-child {
+      margin-right: 40px;
+    }
   }
 }

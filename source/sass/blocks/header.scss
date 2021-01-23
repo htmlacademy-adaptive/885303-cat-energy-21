@@ -101,7 +101,6 @@
   .header__nav-list {
     @include font ($font-size: 18px, $line-height: 24px);
     display: flex;
-    padding-top: 7px;
   }
 
   .header__nav-item {
@@ -109,7 +108,7 @@
     align-items: center;
     border: none;
     min-height: 45px;
-    margin-top: 15px;
+    margin-top: 19px;
 
     &:last-child {
       margin-left: 36px;
@@ -153,6 +152,14 @@
   .header__logo-text--img {
     width: 175px;
     height: 70px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -161,10 +168,14 @@
     @include wrapper ($padding: 0 110px);
     display: flex;
     justify-content: space-between;
-    margin-bottom: -10%;
+    width: 1440px;
     z-index: 100;
     position: relative;
     background-color: transparent;
+
+    &--margin {
+      margin-bottom: -10%;
+    }
   }
 
   .header__logo-text--img {
