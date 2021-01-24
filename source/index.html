@@ -196,9 +196,13 @@
           </p>
           <p class="example__picture">
             <picture>
-              <source media="(min-width: 1440px)" srcset="img/cat-skinny.png">
-              <source media="(min-width: 768px)" srcset="img/cat-skinny.png">
-              <img class="example__image" src="img/after-mobile.png" alt="Изображение толстого кота до программы похудения"
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/cat-skinny.webp 1x, img/cat-skinny@2x.webp 2x">
+              <source type="image/webp" srcset="img/after-mobile.webp 1x, img/after-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1440px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x">
+              <img class="example__image" src="img/after-mobile.png" srcset="img/after-mobile@2x.png 2x" alt="Изображение толстого кота до программы похудения"
                 width="251" height="240">
             </picture>
           </p>
@@ -230,9 +234,13 @@
       <div class="footer__iframe">
         <p class="footer__map-picture">
           <picture>
-          <source media="(min-width: 1440px)" srcset="img/location_desktop.jpg">
-          <source media="(min-width: 768px)" srcset="img/location_tablet.jpg">
-          <img class="footer__map-img" src="img/location.jpg" alt="Изображение карты с меткой">
+          <source type="image/webp" media="(min-width: 1440px)" srcset="img/location_desktop.webp 1x, img/location_desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/location_tablet.webp 1x, img/location_tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/location.webp 1x, img/location@2x.webp 2x">
+
+          <source media="(min-width: 1440px)" srcset="img/location_desktop.jpg 1x, img/location_desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/location_tablet.jpg 1x, img/location_tablet@2x.jpg 2x">
+          <img class="footer__map-img" src="img/location.jpg" srcset="img/location@2x.jpg 2x" alt="Изображение карты с меткой">
           </picture>
         </p>
         <iframe

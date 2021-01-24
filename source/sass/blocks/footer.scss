@@ -205,11 +205,6 @@
     position: relative;
   }
 
-  .footer {
-    @include wrapper($padding: 0 110px);
-    max-width: 1440px;
-  }
-
   .footer__wrap {
     position: absolute;
     width: 570px;
@@ -239,6 +234,7 @@
   }
 
   .footer__container {
+    @include wrapper($padding: 0 110px);
     min-height: 110px;
     padding: 21px 0 36px;
   }
