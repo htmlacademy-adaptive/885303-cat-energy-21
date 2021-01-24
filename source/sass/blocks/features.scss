@@ -46,107 +46,107 @@
 
 @media (min-width: $tablet-width) {
   .features {
-    @include wrapper ($padding: 0 30px)
+    @include wrapper ($padding: 0 30px);
     border-bottom: 1px solid var(--tablet-border);
     padding-top: 13px;
     padding-bottom: 50px;
   }
-}
 
-.features__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  &:nth-child(2n) {
-    margin-right: 78px;
-  }
-}
-
-.features__step {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  width: 247px;
-  height: 280px;
-  padding-left: 0;
-  font-size: 16px;
-  line-height: 24px;
-  padding-top: 45px;
-  margin-bottom: 38px;
-
-  &:nth-child(3n) {
-    margin-bottom: 0;
+    &:nth-child(2n) {
+      margin-right: 78px;
+    }
   }
 
-  &:last-child {
-    margin-bottom: 0;
+  .features__step {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 247px;
+    height: 280px;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 45px;
+    margin-bottom: 38px;
+
+    &:nth-child(3n) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:first-child::after {
+      @include font ($font-size: 280px, $line-height: 280px);
+      content: "1";
+      position: absolute;
+      color: var(--basic-grey);
+      top: 6px;
+      right: 17px;
+      z-index: -1;
+    }
+
+    &:nth-child(2n)::after {
+      @include font ($font-size: 280px, $line-height: 280px);
+      content: "2";
+      position: absolute;
+      color: var(--basic-grey);
+      top: 6px;
+      right: 1px;
+      z-index: -1;
+    }
+
+    &:nth-child(3n)::after {
+      @include font ($font-size: 280px, $line-height: 280px);
+      content: "3";
+      position: absolute;
+      color: var(--basic-grey);
+      top: 6px;
+      right: 0;
+      z-index: -1;
+    }
+
+    &:last-child::after {
+      @include font ($font-size: 280px, $line-height: 280px);
+      content: "4";
+      position: absolute;
+      color: var(--basic-grey);
+      top: 6px;
+      right: -2px;
+      z-index: -1;
+    }
   }
 
-  &:first-child::after {
-    @include font ($font-size: 280px, $line-height: 280px);
-    content: "1";
+  .features__step-square {
+    width: 80px;
+    height: 80px;
+    align-self: flex-start;
+    margin-bottom: 29px;
+  }
+
+  .features__step-picture {
     position: absolute;
-    color: var(--basic-grey);
-    top: 6px;
-    right: 17px;
-    z-index: -1;
+    top: 26px;
+    left: 24px;
   }
 
-  &:nth-child(2n)::after {
-    @include font ($font-size: 280px, $line-height: 280px);
-    content: "2";
-    position: absolute;
-    color: var(--basic-grey);
-    top: 6px;
-    right: 1px;
-    z-index: -1;
+  .features__step-text {
+    width: 248px;
+    margin-bottom: 13px;
   }
 
-  &:nth-child(3n)::after {
-    @include font ($font-size: 280px, $line-height: 280px);
-    content: "3";
-    position: absolute;
-    color: var(--basic-grey);
-    top: 6px;
-    right: 0;
-    z-index: -1;
+  .features__title {
+    @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
+    margin-bottom: 26px;
   }
-
-  &:last-child::after {
-    @include font ($font-size: 280px, $line-height: 280px);
-    content: "4";
-    position: absolute;
-    color: var(--basic-grey);
-    top: 6px;
-    right: -2px;
-    z-index: -1;
-  }
-}
-
-.features__step-square {
-  width: 80px;
-  height: 80px;
-  align-self: flex-start;
-  margin-bottom: 29px;
-}
-
-.features__step-picture {
-  position: absolute;
-  top: 26px;
-  left: 24px;
-}
-
-.features__step-text {
-  width: 248px;
-  margin-bottom: 13px;
-}
-
-.features__title {
-  @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
-  margin-bottom: 26px;
 }
 
 @media (min-width: $desktop-width) {

@@ -3,10 +3,6 @@
   padding-top: 14px;
 }
 
-.example__container {
-  @include wrapper();
-}
-
 .example__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
   @include clear();
@@ -83,8 +79,8 @@
 }
 
 .example__container {
+  @include wrapper();
   position: relative;
-  margin: 0 auto;
   margin-bottom: 34px;
 }
 
@@ -165,7 +161,7 @@
     justify-content: space-between;
   }
 
-   .example__text {
+  .example__text {
     @include clear();
     padding: 0 30px;
     font-size: 16px;
@@ -271,10 +267,6 @@
     margin-bottom: -35px;
   }
 
-  .example__wrapper {
-    width: 436px;
-  }
-
   .example__title {
     @include clear();
     margin-bottom: 145px;
@@ -298,6 +290,7 @@
   .example__wrapper {
     display: flex;
     flex-direction: column;
+    width: 436px;
     margin-right: 50px;
   }
 

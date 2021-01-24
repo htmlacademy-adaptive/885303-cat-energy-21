@@ -315,12 +315,6 @@
       }
     }
 
-    .form__wrap-contacts {
-      label {
-        margin-right: 25px;
-      }
-    }
-
     .form__selection {
       border: 1px solid var(--special-form-border);
       padding: 24px 27px 26px;
@@ -345,6 +339,10 @@
     .form__wrap-contacts {
       @include font ($line-height: 30px);
       margin-bottom: 27px;
+
+      label {
+        margin-right: 25px;
+      }
     }
 
     .form__contacts {
