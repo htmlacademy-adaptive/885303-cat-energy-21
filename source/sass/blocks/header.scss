@@ -2,11 +2,19 @@
   display: flex;
   flex-direction: column;
   background-color: var(--basic-white);
-  width: 320px;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  min-height: 66px;
+  border-bottom: 1px solid var(--tablet-border);
+  padding: 0 20px;
 }
 
 .header__nav-list {
   @include font ($font-weight: 500);
+  @include clear();
   list-style: none;
 }
 
@@ -16,6 +24,14 @@
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var(--tablet-border);
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .header__nav-link {
@@ -55,14 +71,6 @@
   }
 }
 
-.header__wrap {
-  display: flex;
-  width: 175px;
-  margin-right: auto;
-  min-height: 66px;
-  border-bottom: 1px solid var(--tablet-border);
-}
-
 .header__logo {
   margin-right: 55px;
   align-self: center;
@@ -79,12 +87,13 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    width: $tablet-width;
+    @include wrapper ($margin: 0 auto, $padding: 0 30px);
     flex-direction: row;
     justify-content: space-between;
   }
 
   .header__wrap {
+    @include clear();
     margin-right: auto;
     border: none;
   }
@@ -92,17 +101,40 @@
   .header__nav-list {
     @include font ($font-size: 18px, $line-height: 24px);
     display: flex;
-    padding-top: 7px;
   }
 
   .header__nav-item {
     display: flex;
     align-items: center;
     border: none;
+    min-height: 45px;
+    margin-top: 19px;
+
+    &:last-child {
+      margin-left: 36px;
+    }
+
+    &:nth-child(2n) {
+      margin-left: 36px;
+    }
   }
 
   .header__nav-link {
-    margin-left: 35px;
+    color: var(--basic-black);
+    text-decoration: none;
+    position: relative;
+
+    &.current {
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--basic-green);
+        width: 100%;
+        height: 2px;
+        top: 32px;
+        left: 2px;
+      }
+    }
   }
 
   .header__nav-button {
@@ -120,15 +152,30 @@
   .header__logo-text--img {
     width: 175px;
     height: 70px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    width: 1440px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: -10%;
+    width: 1440px;
+    z-index: 100;
+    position: relative;
+    background-color: transparent;
+    padding: 0 110px;
+
+    &--margin {
+      margin-bottom: -10%;
+    }
   }
 
   .header__logo-text--img {
@@ -144,13 +191,15 @@
     @include font ($line-height: 30px);
   }
 
-  .header__nav-link {
-    margin-left: 35px;
-    margin-bottom: 0;
-  }
-
   .header__nav-link--white {
     color: var(--basic-white);
+    margin-bottom: 0;
+
+    &.current {
+      &::after {
+        background-color: var(--basic-white);
+      }
+    }
   }
 
   .header__nav-button {

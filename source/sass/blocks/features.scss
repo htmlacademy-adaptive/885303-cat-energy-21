@@ -1,61 +1,87 @@
 .features {
+  @include clear();
+  @include wrapper();
   min-height: 430px;
   background-color: var(-basic-white);
-  padding-top: 27px;
+  padding-bottom: 34px;
 }
 
 .features__title {
   @include font ($font-size: 36px, $line-height: 40px, $text-transform: inherit);
   color: var(--basic-black);
+  margin-top: 26px;
+  margin-bottom: 40px;
 }
 
 .features__list {
+  @include clear();
   list-style: none;
 }
 
 .features__step {
-  position: relative;
+  display: flex;
   min-height: 60px;
-  margin-top: 20px;
-  padding-left: 75px;
+  margin-bottom: 20px;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 60px;
-    height: 60px;
-    background-color: var(--basic-green);
-    left: 0;
-    top: 0;
-  }
+.features__step-text {
+  @include clear();
+  margin-top: 2px;
+}
+
+.features__step-square {
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  background-color: var(--basic-green);
+  align-self: center;
+  margin-right: 20px;
+}
+
+.features__step-picture {
+  position: absolute;
+  top: 15px;
+  left: 15px;
 }
 
 @media (min-width: $tablet-width) {
   .features {
+    @include wrapper ($padding: 0 30px);
     border-bottom: 1px solid var(--tablet-border);
+    padding-top: 13px;
+    padding-bottom: 50px;
   }
 
   .features__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    &:nth-child(2n) {
+      margin-right: 78px;
+    }
   }
 
   .features__step {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     width: 247px;
     height: 280px;
-    align-items: center;
     padding-left: 0;
     font-size: 16px;
     line-height: 24px;
+    padding-top: 45px;
+    margin-bottom: 38px;
 
-    &::before {
-      position: absolute;
-      width: 80px;
-      height: 80px;
-      left: 0;
-      top: 0;
+    &:nth-child(3n) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
 
     &:first-child::after {
@@ -63,8 +89,8 @@
       content: "1";
       position: absolute;
       color: var(--basic-grey);
-      top: -40px;
-      right: 0;
+      top: 6px;
+      right: 17px;
       z-index: -1;
     }
 
@@ -73,8 +99,8 @@
       content: "2";
       position: absolute;
       color: var(--basic-grey);
-      top: -40px;
-      right: 0;
+      top: 6px;
+      right: 1px;
       z-index: -1;
     }
 
@@ -83,7 +109,7 @@
       content: "3";
       position: absolute;
       color: var(--basic-grey);
-      top: -40px;
+      top: 6px;
       right: 0;
       z-index: -1;
     }
@@ -93,28 +119,75 @@
       content: "4";
       position: absolute;
       color: var(--basic-grey);
-      top: -40px;
-      right: 0;
+      top: 6px;
+      right: -2px;
       z-index: -1;
     }
   }
 
+  .features__step-square {
+    width: 80px;
+    height: 80px;
+    align-self: flex-start;
+    margin-bottom: 29px;
+  }
+
+  .features__step-picture {
+    position: absolute;
+    top: 26px;
+    left: 24px;
+  }
+
+  .features__step-text {
+    width: 248px;
+    margin-bottom: 13px;
+  }
+
   .features__title {
     @include font ($font-size: 60px, $line-height: 60px, $text-transform: inherit);
+    margin-bottom: 26px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .features {
+    @include wrapper ($padding: 0 110px);
+    width: 1440px;
+    border-bottom: none;
+  }
+
   .features__list {
     flex-wrap: nowrap;
+
+    &:nth-child(2n) {
+      margin-right: 15px;
+    }
   }
 
   .features__step {
     width: 230px;
     margin: 0;
+
+    &:first-child::after {
+      right: 0;
+    }
+
+    &:nth-child(2n)::after {
+      right: -15px;
+    }
+
+    &:nth-child(3n)::after {
+      right: -17px;
+    }
+
+    &:last-child::after {
+      right: -18px;
+    }
   }
 
   .features__title {
-    margin-bottom: 32px;
+    @include clear();
+    margin-top: 19px;
+    margin-bottom: 27px;
   }
 }

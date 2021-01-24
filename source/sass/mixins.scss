@@ -12,9 +12,12 @@
   border: $border;
 }
 
-@mixin container ($margin-top: 0, $margin-bottom: 0, $margin-left: 0, $margin-right: 0) {
-  margin-top: $margin-top;
-  margin-bottom: $margin-bottom;
-  margin-left: $margin-left;
-  margin-right: $margin-right;
+@mixin clear ($margin: 0, $padding: 0) {
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin wrapper ($margin: 0 auto, $padding: 0 20px) {
+  margin: $margin;
+  padding: $padding;
 }
