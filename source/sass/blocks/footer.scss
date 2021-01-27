@@ -41,15 +41,14 @@
 }
 
 .footer__social-link {
+  svg:hover {
+    stroke: var(--basic-green);
+  }
 
-    svg:hover {
-      stroke: var(--basic-green);
-    }
-
-    svg:active {
-      stroke: var(--basic-green);
-      stroke-opacity: 0.3;
-    }
+  svg:active {
+    stroke: var(--basic-green);
+    stroke-opacity: 0.3;
+  }
 }
 
 .footer__social {
@@ -68,15 +67,6 @@
   padding-bottom: 15px;
 }
 
-.footer__coopyright-wrap {
-  @include clear();
-  @include wrapper();
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 12px;
-  padding-bottom: 14px;
-}
 
 .footer__logo {
   @include clear();
@@ -87,6 +77,26 @@
 .footer__logo-image {
   &:hover {
     opacity: 0.8;
+
+    .footer__coopyright-wrap {
+      @include clear();
+      @include wrapper();
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      padding-bottom: 14px;
+      cursor: pointer;
+
+      &:hover {
+        stroke: var(--basic-green);
+      }
+
+      &:active {
+        stroke: var(--basic-green);
+        opacity: 0.3;
+      }
+    }
   }
 
   &:active {
@@ -115,19 +125,6 @@
 .footer__map-img {
   display: block;
   margin: 0 auto;
-}
-
-.footer__coopyright-wrap {
-  cursor: pointer;
-
-  &:hover {
-    stroke: var(--basic-green);
-  }
-
-  &:active {
-    stroke: var(--basic-green);
-    opacity: 0.3;
-  }
 }
 
 @media (min-width: $tablet-width) {

@@ -283,8 +283,8 @@
   }
 
   .form__checkbox {
-
     & + label {
+
       position: relative;
       display: block;
       padding-left: 59px;
@@ -295,7 +295,7 @@
         width: 40px;
         height: 40px;
         top: 0;
-        left: 0git ;
+        left: 0;
         border: 1px solid var(--special-grey);
       }
     }
@@ -309,7 +309,6 @@
     &:checked {
       background-image: url("../img/checkbox_active.svg");
     }
-
   }
 
   .form__wrapper-additionally {
@@ -342,7 +341,7 @@
   }
 
   .form__text {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 16px;
     color: var(--basic-black);
     text-align: center;
@@ -576,10 +575,6 @@
     }
   }
 
-  .form__text {
-    font-size: 16px;
-    line-height: 16px;
-  }
 
   @media (min-width: $desktop-width) {
     .form__wrap-desktop {
@@ -595,6 +590,7 @@
       justify-content: space-between;
       border-bottom: none;
       margin-right: 80px;
+      margin-bottom: 0;
     }
 
     .form__caption {
@@ -679,10 +675,6 @@
       }
     }
 
-    .form__pet-options {
-      margin-bottom: 0;
-    }
-
     .form__comment {
       padding: 0;
 
@@ -698,7 +690,7 @@
         &::before {
           width: 100vw;
           top: 21px;
-          right: 1258px
+          right: 1258px;
         }
       }
 
@@ -781,7 +773,6 @@
         padding: 0;
 
         .form__wrap-additionally {
-
           &:nth-child(2n+1) {
             margin-right: 104px;
           }
