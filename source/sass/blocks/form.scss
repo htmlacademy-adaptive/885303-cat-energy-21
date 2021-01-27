@@ -40,6 +40,18 @@
       padding: 14px;
       border: 1px solid var(--special-form-border);
 
+      &:hover {
+        border: 1px solid var(--special-grey);
+      }
+
+      &:focus {
+        outline-color: var(--basic-dark-grey);
+      }
+
+      &.error {
+        border: 2px solid var(--error);
+      }
+
       &::-webkit-input-placeholder {
         text-transform: uppercase;
       }
@@ -92,41 +104,66 @@
     @include wrapper ();
     color: var(--basic-dark-grey);
     border: none;
-    padding-top: 24px;
-    padding-bottom: 12px;
+    padding-top: 26px;
+    padding-bottom: 13px;
+  }
 
-    .form__wrap-contacts {
-      display: flex;
-      margin-bottom: 28px;
+  .form__wrap-contacts {
+    position: relative;
+    display: flex;
+    margin-bottom: 13px;
 
-      label {
-        margin-right: 11px;
-        align-self: center;
-        flex-shrink: 0;
+    label {
+      margin-right: 11px;
+      align-self: center;
+      flex-shrink: 0;
+    }
+
+    input {
+      width: 100%;
+      height: 45px;
+      padding: 16px 15px 16px;
+      border: 1px solid var(--special-form-border);
+
+      &:hover {
+        border: 1px solid var(--special-grey);
       }
 
-      input {
-        width: 100%;
-        height: 45px;
-        padding: 16px 14px 14px;
-        border: 1px solid var(--special-form-border);
-
-        &::-webkit-input-placeholder {
-          text-transform: uppercase;
-        }
-
-        &::-moz-placeholder {
-          text-transform: uppercase;
-        }
-
-        &:-moz-placeholder {
-          text-transform: uppercase;
-        }
-
-        &:-ms-input-placeholder {
-          text-transform: uppercase;
-        }
+      &:focus {
+        outline-color: var(--basic-dark-grey);
       }
+
+      &.error {
+        border: 2px solid var(--error);
+      }
+
+      &::-webkit-input-placeholder {
+        text-transform: uppercase;
+      }
+
+      &::-moz-placeholder {
+        text-transform: uppercase;
+      }
+
+      &:-moz-placeholder {
+        text-transform: uppercase;
+      }
+
+      &:-ms-input-placeholder {
+        text-transform: uppercase;
+      }
+    }
+
+    .form__email-icon {
+      position: absolute;
+      top: 19px;
+      right: 24px;
+    }
+
+    .form__tel-icon {
+      position: absolute;
+      top: 17px;
+      right: 22px;
     }
   }
 
@@ -141,8 +178,9 @@
     &::after {
       content: "";
       position: absolute;
+      width: 100px;
       height: 3px;
-      top: 17px;
+      top: 14px;
       left: 201px;
       background-color: var(--basic-green);
     }
@@ -164,7 +202,7 @@
       width: 280px;
       height: 150px;
       padding: 10px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       border: 1px solid var(--special-form-border);
 
       &::-webkit-input-placeholder {
@@ -191,16 +229,18 @@
 
   .form__comment-title {
     @include font ($font-size: 24px, $line-height: 24px, $text-transform: inherit);
+    display: block;
     color: var(--basic-black);
     border: none;
     position: relative;
+    margin-bottom: 39px;
 
     &::after {
       content: "";
       position: absolute;
-      width: 150%;
+      width: 56%;
       height: 3px;
-      top: 15px;
+      top: 14px;
       left: 142px;
       background-color: var(--basic-green);
     }
@@ -234,7 +274,42 @@
 
     label {
       align-self: center;
+
+
+      &:focus {
+        border: 2px solid var(--special-grey);
+      }
     }
+  }
+
+  .form__checkbox {
+
+    & + label {
+      position: relative;
+      display: block;
+      padding-left: 59px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 0;
+        left: 0git ;
+        border: 1px solid var(--special-grey);
+      }
+    }
+
+    &:focus {
+      & + label {
+        border: 2px solid var(--special-grey);
+      }
+    }
+
+    &:checked {
+      background-image: url("../img/checkbox_active.svg");
+    }
+
   }
 
   .form__wrapper-additionally {
@@ -263,7 +338,7 @@
     @include clear();
     width: 280px;
     height: 40px;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
   }
 
   .form__text {
@@ -278,6 +353,7 @@
     .form_container {
       @include wrapper ($padding: 0 30px);
       padding: 0 41px 0;
+      padding-bottom: 62px;
     }
 
     .form__caption {
@@ -318,7 +394,7 @@
     .form__selection {
       border: 1px solid var(--special-form-border);
       padding: 24px 27px 26px;
-      margin-bottom: 52px;
+      margin-bottom: 49px;
       margin-left: 30px;
     }
 
@@ -330,71 +406,121 @@
       }
 
       input {
-        margin-right: 20px;
+        margin-right: 19px;
         width: 40px;
         height: 40px;
       }
     }
 
-    .form__wrap-contacts {
-      @include font ($line-height: 30px);
-      margin-bottom: 27px;
-
-      label {
-        margin-right: 25px;
-      }
-    }
 
     .form__contacts {
-      padding-left: 30px;
+      padding-left: 28px;
+      padding-bottom: 45px;
+
+      .form__wrap-contacts {
+        @include font ($line-height: 30px);
+        margin-bottom: 20px;
+
+        input {
+          height: 52px;
+        }
+
+        label {
+          margin-right: 23px;
+        }
+      }
     }
 
     .form__contacts-title {
       @include font ($font-size: 36px, $line-height: 36px, $text-transform: none);
-      margin-bottom: 78px;
+      margin-bottom: 75px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: var(--basic-green);
+        width: 33px;
+        height: 3px;
+        top: 22px;
+        left: -70px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        background-color: var(--basic-green);
+        width: 19vw;
+        height: 3px;
+        top: 22px;
+        left: 556px;
+      }
     }
 
     .form__comment {
       @include font ($line-height: 30px);
+      padding-left: 29px;
 
       .form__comment-title {
         @include font ($font-size: 36px, $line-height: 36px, $text-transform: none);
+        margin-bottom: 3px;
+
+        &::after {
+          width: 62vw;
+          top: 22px;
+          left: 219px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: var(--basic-green);
+          width: 51vw;
+          height: 3px;
+          top: 22px;
+          right: 675px;
+        }
       }
 
       textarea {
         width: 631px;
         height: 174px;
         padding: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 59px;
+        margin-top: 72px;
+        padding-top: 10px;
+        padding-left: 17px;
 
         &::-webkit-input-placeholder {
-          @include font ($font-size: 16px, $line-height: 18px);
+          @include font ($font-size: 20px, $line-height: 30px);
           text-align: left;
         }
 
         &::-moz-placeholder {
-          @include font ($font-size: 16px, $line-height: 18px);
+          @include font ($font-size: 20px, $line-height: 30px);
           text-align: left;
         }
 
         &:-moz-placeholder {
-          @include font ($font-size: 16px, $line-height: 18px);
+          @include font ($font-size: 20px, $line-height: 30px);
           text-align: left;
         }
 
         &:-ms-input-placeholder {
-          @include font ($font-size: 16px, $line-height: 18px);
+          @include font ($font-size: 20px, $line-height: 30px);
           text-align: left;
         }
       }
     }
 
     .form__wrapper-additionally {
-      @include wrapper();
+      @include wrapper($padding: 0 30px);
       display: flex;
 
       .form__button {
-        margin-right: 60px;
+        font-size: 20px;
+        width: 282px;
+        height: 52px;
+        margin-right: 63px;
       }
     }
 
@@ -403,7 +529,24 @@
 
       .form__additionally-title {
         @include font ($font-size: 36px, $line-height: 36px, $text-transform: none);
-        margin-bottom: 57px;
+        margin-bottom: 58px;
+        padding-left: 9px;
+
+        &::after {
+          width: 203%;
+          top: 22px;
+          left: 261px;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: var(--basic-green);
+          width: 39px;
+          height: 3px;
+          top: 22px;
+          left: -70px;
+        }
       }
 
 
@@ -411,28 +554,37 @@
         @include clear();
         display: flex;
         flex-wrap: wrap;
-        margin-bottom: 53px;
+        margin-bottom: 21px;
+        padding-left: 9px;
 
         .form__wrap-additionally {
           width: 221px;
           height: 40px;
 
           &:nth-child(2n+1) {
-            margin-right: 120px;
+            margin-right: 123px;
+            margin-bottom: 32px;
           }
 
           input {
             width: 40px;
             height: 40px;
+            margin-right: 18px;
           }
         }
       }
     }
   }
 
+  .form__text {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
   @media (min-width: $desktop-width) {
     .form__wrap-desktop {
       display: flex;
+      max-width: 1440px;
       margin-bottom: 68px;
     }
 
@@ -447,16 +599,22 @@
 
     .form__caption {
       margin-top: 64px;
-      margin-bottom: 55px;
+      margin-bottom: 57px;
+      padding: 0;
     }
 
     .form__title {
-      margin-bottom: 69px;
+      margin-bottom: 67px;
+      padding: 0;
     }
 
     .form__wrap-options {
       width: 569px;
       margin-bottom: 25px;
+
+      input {
+        height: 48px;
+      }
 
       &:last-child {
         margin: 0;
@@ -471,18 +629,33 @@
 
     .form__contacts {
       @include font ($font-size: 20px, $line-height: 30px);
+      padding: 0;
 
       .form__contacts-title {
-        margin-bottom: 45px;
+        margin-bottom: 76px;
+
+        &::after {
+          width: 100vw;
+          left: 553px;
+        }
+
+        &::before {
+          width: 100vw;
+          top: 21px;
+          right: 1258px;
+        }
       }
 
       .form__container-contacts {
+        position: relative;
         display: flex;
+        margin-bottom: 26px;
+
 
         .form__wrap-contacts {
           margin-bottom: 45px;
 
-          h2 {
+          label {
             margin-right: 20px;
           }
 
@@ -490,6 +663,12 @@
             width: 485px;
             height: 50px;
             margin-right: 78px;
+          }
+
+          .form__email-icon {
+            position: absolute;
+            top: 19px;
+            left: 532px;
           }
 
           .form__tel {
@@ -500,15 +679,34 @@
       }
     }
 
+    .form__pet-options {
+      margin-bottom: 0;
+    }
+
     .form__comment {
+      padding: 0;
+
       .form__comment-title {
-        margin-bottom: 76px;
+        margin-bottom: 3px;
+
+        &::after {
+          width: 100vw;
+          top: 21px;
+          left: 222px;
+        }
+
+        &::before {
+          width: 100vw;
+          top: 21px;
+          right: 1258px
+        }
       }
 
       textarea {
         width: 1220px;
         padding: 10px;
-        margin-bottom: 62px;
+        margin-bottom: 61px;
+        padding-left: 18px;
 
         &::-webkit-input-placeholder {
           @include font ($font-size: 20px, $line-height: 30px);
@@ -530,6 +728,7 @@
 
     .form_container {
       @include wrapper($padding: 0 110px);
+      max-width: 1440px;
     }
 
     .form__button {
@@ -544,17 +743,45 @@
     .form__text {
       font-size: 16px;
       align-self: center;
+      margin-top: 10px;
     }
 
     .form__wrapper-additionally {
       margin-bottom: 61px;
+      padding: 0;
+
+      .form__button {
+        width: 569px;
+        height: 52px;
+        margin-right: 82px;
+      }
     }
 
     .form__additionally {
+      padding-left: 0;
+
+      .form__additionally-title {
+        padding: 0;
+
+        &::after {
+          width: 100vw;
+          top: 22px;
+          left: 252px;
+        }
+
+        &::before {
+          width: 274px;
+          top: 21px;
+          left: -314px;
+        }
+      }
+
       .form__container-additionally {
-        margin-bottom: 46px;
+        margin-bottom: 25px;
+        padding: 0;
 
         .form__wrap-additionally {
+
           &:nth-child(2n+1) {
             margin-right: 104px;
           }
