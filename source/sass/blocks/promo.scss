@@ -6,6 +6,17 @@
   min-height: 289px;
   background-image: url("../img/promo_mobile.png");
   justify-content: flex-end;
+
+  @media (min-resolution: 2dppx) {
+    @include wrapper();
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    min-height: 289px;
+    justify-content: flex-end;
+    background: url("../img/promo_mobile@2x.png") no-repeat;
+    background-size: 100%;
+  }
 }
 
 .promo__title {
@@ -41,6 +52,10 @@
     width: 708px;
     min-height: 200px;
     background-image: url("../img/promo_tab.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/promo_tab@2x.png");
+    }
   }
 
   .promo {

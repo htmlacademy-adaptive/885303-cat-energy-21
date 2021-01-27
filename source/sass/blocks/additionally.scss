@@ -46,6 +46,14 @@
   @include button();
   width: 280px;
   height: 38px;
+
+  &:hover {
+    background-color: var(--button-hover-green);
+  }
+
+  &:active span {
+    opacity: 0.3;
+  }
 }
 
 .additionally__list {
